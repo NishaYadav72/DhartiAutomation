@@ -694,42 +694,53 @@ nav {
 /* ===============================
    ABSOLUTE FINAL MOBILE FIX
    =============================== */
+/* =====================================
+   UNIVERSAL HERO MOBILE RESPONSIVE FIX
+   Works on ALL mobile screens
+   ===================================== */
 @media (max-width: 768px) {
 
-    /* HERO SAFE AREA */
+    /* Hero section auto height + safe top */
     .hero,
     .page-hero,
     .product-detail-hero {
-        display: block !important;
         height: auto !important;
-        min-height: unset !important;
-        padding-top: calc(140px + env(safe-area-inset-top)) !important;
+        min-height: 100svh;   /* modern mobile viewport */
+        padding-top: calc(12vh + env(safe-area-inset-top));
+        padding-bottom: 8vh;
+        display: block !important;
         overflow: visible !important;
     }
 
-    /* H1 FONT CLIP FIX */
+    /* Content spacing */
+    .hero-content {
+        margin-top: 0;
+        padding-top: 0;
+        overflow: visible;
+    }
+
+    /* H1 universal safe positioning */
     .hero-title {
-        display: inline-block;     /* 🔥 MOST IMPORTANT */
-        padding-top: 14px !important;
-        margin-top: 14px !important;
-        line-height: 1.45 !important;
-        overflow: visible !important;
+        display: block;
+        margin-top: clamp(24px, 6vh, 64px);  /* 🔥 AUTO */
+        padding-top: 0;
+        line-height: 1.35;
+        overflow: visible;
     }
 
-    /* REMOVE ANY CLIPPING PARENT */
-    .hero-content,
-    .hero-inner {
-        overflow: visible !important;
+    /* H2 */
+    .hero-subtitle {
+        margin-top: 0.5rem;
     }
 }
 
-/* EXTRA SMALL / ANDROID */
+/* Extra small phones */
 @media (max-width: 480px) {
     .hero-title {
-        padding-top: 18px !important;
-        margin-top: 18px !important;
+        margin-top: clamp(32px, 8vh, 72px);
     }
 }
+
 
 
 
