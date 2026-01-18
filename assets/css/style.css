@@ -743,6 +743,84 @@ nav {
 
 
 
+/* =================================
+   UNIVERSAL IMAGE RESPONSIVE FIX
+   ================================= */
+
+/* Hero Media Image */
+.hero-media-frame img,
+.about-photo img {
+    width: 100% !important;      /* full width of parent */
+    height: auto !important;     /* height auto, maintain aspect ratio */
+    max-height: 100% !important; 
+    object-fit: contain;         /* crop-free scaling */
+    display: block;
+}
+
+/* Hero Media Frame */
+.hero-media-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* About section image container */
+.about-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Floating icons & badges adjust */
+.hero-media-badges {
+    bottom: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+
+    /* Hero media */
+    .hero-media-frame {
+        max-height: 300px;          /* adjust hero image height */
+        border-radius: 16px;
+    }
+
+    .hero-media-frame img {
+        object-fit: cover;          /* maintain visual cover for hero */
+        max-height: 100%;
+    }
+
+    /* About section image */
+    .about-photo {
+        max-height: 250px;          /* adjust according to design */
+    }
+
+    .about-photo img {
+        object-fit: cover;          /* no cutting, nice fit */
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .hero-media-frame {
+        max-height: 220px;
+    }
+
+    .about-photo {
+        max-height: 180px;
+    }
+}
+
+
+
+
 
 
 
