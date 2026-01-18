@@ -696,32 +696,41 @@ nav {
    =============================== */
 @media (max-width: 768px) {
 
-    /* FORCE SAFE ZONE FOR H1 */
-    .hero-title {
-        position: relative;
-        top: 6px;                 /* 🔥 final micro push */
-        padding-top: 12px !important;
-        margin-top: 12px !important;
-        line-height: 1.4 !important;
-        overflow: visible !important;
-    }
-
-    /* REMOVE ANY CLIPPING FROM PARENTS */
-    .hero-content,
-    .hero-inner,
+    /* HERO SAFE AREA */
     .hero,
     .page-hero,
     .product-detail-hero {
+        display: block !important;
+        height: auto !important;
+        min-height: unset !important;
+        padding-top: calc(140px + env(safe-area-inset-top)) !important;
+        overflow: visible !important;
+    }
+
+    /* H1 FONT CLIP FIX */
+    .hero-title {
+        display: inline-block;     /* 🔥 MOST IMPORTANT */
+        padding-top: 14px !important;
+        margin-top: 14px !important;
+        line-height: 1.45 !important;
+        overflow: visible !important;
+    }
+
+    /* REMOVE ANY CLIPPING PARENT */
+    .hero-content,
+    .hero-inner {
         overflow: visible !important;
     }
 }
 
-/* VERY SMALL DEVICES */
+/* EXTRA SMALL / ANDROID */
 @media (max-width: 480px) {
     .hero-title {
-        top: 8px;
+        padding-top: 18px !important;
+        margin-top: 18px !important;
     }
 }
+
 
 
 
