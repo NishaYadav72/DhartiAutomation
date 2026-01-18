@@ -260,11 +260,11 @@ $(document).ready(function() {
     });
 
     // Add active class to current page nav link
-    const currentLocation = window.location.pathname.split('/').pop() || 'Home.html';
+    const currentLocation = window.location.pathname.split('/').pop() || 'index.html';
     
     $('.nav-link').each(function() {
         const href = $(this).attr('href');
-        if (href === currentLocation || (currentLocation === '' && href === 'Home.html')) {
+        if (href === currentLocation || (currentLocation === '' && href === 'index.html')) {
             $(this).css({
                 'color': 'var(--accent-color)',
                 'font-weight': '600'
