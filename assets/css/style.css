@@ -743,103 +743,60 @@ nav {
 
 
 
-/* =================================
-   UNIVERSAL IMAGE RESPONSIVE FIX
-   ================================= */
 
-/* Hero Media Image */
-.hero-media-frame img,
-.about-photo img {
-    width: 100% !important;      /* full width of parent */
-    height: auto !important;     /* height auto, maintain aspect ratio */
-    max-height: 100% !important; 
-    object-fit: contain;         /* crop-free scaling */
+
+
+
+
+
+
+
+
+/* ===============================
+   HERO + ABOUT IMAGE RESPONSIVE FIX
+   =============================== */
+
+/* Hero Media */
+.hero-media-frame {
+    width: 100%;
+    height: auto;           /* maintain aspect ratio */
+    overflow: visible;      /* prevent clipping */
+    border-radius: 20px;
+}
+
+.hero-media-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;      /* cover without distortion */
     display: block;
 }
 
-/* Hero Media Frame */
-.hero-media-frame {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
-}
-
-/* About section image container */
+/* About Photo */
 .about-photo {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border-radius: 18px;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+    position: relative;
 }
 
-/* Floating icons & badges adjust */
-.hero-media-badges {
-    bottom: 10px !important;
-    left: 10px !important;
-    right: 10px !important;
+.about-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;      /* prevents cutting */
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-
-    /* Hero media */
-    .hero-media-frame {
-        max-height: 300px;          /* adjust hero image height */
-        border-radius: 16px;
-    }
-
-    .hero-media-frame img {
-        object-fit: cover;          /* maintain visual cover for hero */
-        max-height: 100%;
-    }
-
-    /* About section image */
-    .about-photo {
-        max-height: 250px;          /* adjust according to design */
-    }
-
-    .about-photo img {
-        object-fit: cover;          /* no cutting, nice fit */
-        width: 100%;
-        height: 100%;
-    }
-}
-
-/* Extra small phones */
-@media (max-width: 480px) {
-
-    .hero-media-frame {
-        max-height: 220px;
-    }
-
-    .about-photo {
-        max-height: 180px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+/* About Grid Layout */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;             /* reduced gap for mobile */
     align-items: center;
 }
 
-.about-visual {
-    position: relative;
-    z-index: 1;
-}
-
+/* Floating Badge / Experience */
 .experience-float {
     position: absolute;
     bottom: 14px;
@@ -851,45 +808,14 @@ nav {
     z-index: 3;
 }
 
+/* Badge Styling */
 .experience-float .experience-badge {
-    position: relative;
-    margin: 0;
     background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0.14));
     border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(12px);
     border-radius: 999px;
     padding: 1rem 1.4rem;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-}
-
-@media (max-width: 768px) {
-    .experience-float {
-        bottom: 12px;
-        right: 50%;
-        transform: translateX(50%);
-        width: 200px;
-    }
-}
-
-.about-photo {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
-    margin-bottom: 1.5rem;
-}
-
-.about-photo img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.about-photo::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
 }
 
 /* Visual Background Effects */
@@ -929,6 +855,46 @@ nav {
         opacity: 0;
     }
 }
+
+/* =================================
+   MOBILE RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;  /* stack on mobile */
+        gap: 1.5rem;
+    }
+
+    .hero-media-frame,
+    .about-photo {
+        max-height: 300px;           /* mobile height */
+    }
+
+    .hero-media-frame img,
+    .about-photo img {
+        object-fit: cover;           /* fill container without cutting */
+    }
+
+    .experience-float {
+        bottom: 12px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-media-frame,
+    .about-photo {
+        max-height: 220px;           /* very small phones */
+    }
+
+    .experience-float {
+        width: 160px;
+    }
+}
+
 
 /* Scroll Animation */
 .animate-on-scroll {
