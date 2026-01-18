@@ -691,21 +691,54 @@ nav {
     }
 }
 
-/* EXTRA SMALL DEVICES */
-@media (max-width: 480px) {
+/* ===============================
+   ABSOLUTE FINAL MOBILE FIX
+   =============================== */
+@media (max-width: 768px) {
 
+    /* Break 100vh + flex center issue */
+    .hero,
+    .page-hero,
+    .product-detail-hero {
+        height: auto !important;
+        min-height: calc(100svh - 80px) !important;
+        display: block !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        padding-top: calc(80px + env(safe-area-inset-top)) !important;
+        padding-bottom: 60px;
+        overflow: visible !important;
+    }
+
+    /* Push content safely down */
+    .hero-content {
+        position: relative;
+        top: 0;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Heading safety */
     .hero-title {
-        font-size: 1.85rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .hero-stats {
-        grid-template-columns: 1fr;
+        margin-top: 10px !important;
+        padding-top: 10px !important;
+        line-height: 1.3;
     }
 }
+
+/* iPhone / very small devices */
+@media (max-width: 480px) {
+    .hero,
+    .page-hero,
+    .product-detail-hero {
+        padding-top: calc(100px + env(safe-area-inset-top)) !important;
+    }
+}
+
+
+
+
+
 
 
 .about-grid {
