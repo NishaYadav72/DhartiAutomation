@@ -696,27 +696,33 @@ nav {
    =============================== */
 @media (max-width: 768px) {
 
-    /* H1 safe push */
+    /* FORCE SAFE ZONE FOR H1 */
     .hero-title {
-        margin-top: 16px !important;
-        padding-top: 16px !important;
-        line-height: 1.35 !important;
-        display: block;
+        position: relative;
+        top: 6px;                 /* 🔥 final micro push */
+        padding-top: 12px !important;
+        margin-top: 12px !important;
+        line-height: 1.4 !important;
+        overflow: visible !important;
     }
 
-    /* Parent accidental clipping remove */
-    .hero-content {
+    /* REMOVE ANY CLIPPING FROM PARENTS */
+    .hero-content,
+    .hero-inner,
+    .hero,
+    .page-hero,
+    .product-detail-hero {
         overflow: visible !important;
     }
 }
 
-/* Extra small phones */
+/* VERY SMALL DEVICES */
 @media (max-width: 480px) {
     .hero-title {
-        margin-top: 20px !important;
-        padding-top: 20px !important;
+        top: 8px;
     }
 }
+
 
 
 
