@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dharti IoT</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+    <style>
+        /* Basic form styling (same as your design) */
+        .contact-form { margin-top: 30px; }
+        .form-row { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px; }
+        .form-field { flex: 1; display: flex; flex-direction: column; }
+        .form-field label { font-weight: bold; margin-bottom: 5px; }
+        .form-field input, .form-field textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        textarea { resize: vertical; }
+        .form-actions { display: flex; gap: 15px; margin-top: 10px; }
+        .form-actions .btn { padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; }
+        .btn-primary { background-color: #022f88; color: white; }
+        .btn-primary:hover { background-color: #011e5f; }
+        .btn-secondary { background-color: #555; color: white; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+        .status-msg { margin-top: 15px; font-weight: bold; text-align: center; }
+
+
+
+        /* ===== CONTACT GRID ===== */
+.contact-page-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  align-items:flex-start;
+}
+
+/* LEFT IMAGE */
+.contact-image img{
+  width:100%;
+  height: 540px;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+/* CONTACT INFO (RIGHT OF MAP) */
+.contact-info-cards{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* ===== MAP ===== */
+.map-section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  margin-top:60px;
+  align-items:center;
+}
+
+.map-container{
+  position:relative;
+  width:100%;
+}
+
+.india-map{
+  width:100%;
+  display:block;
+}
+
+/* Marker */
+.marker{
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:red;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* Tooltip */
+.tooltip{
+  position:absolute;
+  bottom:25px;
+  left:-60px;
+  background:#000;
+  color:#fff;
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:4px;
+  white-space:nowrap;
+}
+
+.marker:hover .tooltip{display:block}
+
+/* ===== FORM ===== */
+.contact-form{margin-top:0}
+.form-row{display:flex; gap:15px; margin-bottom:15px}
+.form-field{flex:1; display:flex; flex-direction:column}
+.form-field input, .form-field textarea{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+.form-actions{display:flex; gap:15px}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .contact-page-grid,
+  .map-section{
+    grid-template-columns:1fr;
+  }
+}
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+<a href="Home.html" class="logo">
+    <div class="logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+            
+            <nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Product.html" class="nav-link dropdown-toggle">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Product.html" class="nav-link">All Products</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Service.html" class="nav-link dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Service.html" class="nav-link">All Services</a></li>
+                            <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
+                            <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
+                            <li><a href="consunting.html" class="nav-link">Consulting</a></li>
+                            <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
+                    <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Contact Banner -->
+        <section class="page-hero contact-hero">
+            <div class="hero-overlay"></div>
+            <div class="container page-hero-inner">
+                <div class="page-hero-text">
+                    <p class="section-label">Contact</p>
+                    <h1 class="page-hero-title">Let’s Talk About Your Next Smart Space</h1>
+                    <p class="page-hero-subtitle">Reach our consultants for quick estimates, solution walkthroughs, or a tailored roadmap for your site.</p>
+                    <div class="hero-buttons">
+                        <a href="tel:+911234567890" class="btn btn-primary"><span class="btn-icon">📞</span>Call Us</a>
+                        <a href="mailto:info@dhartiiot.com" class="btn btn-secondary"><span class="btn-icon">✉️</span>Email Us</a>
+                    </div>
+                    <div class="page-hero-badges">
+                        <div class="page-badge">
+                            <span class="badge-icon">⏱️</span>
+                            <div>
+                                <strong>Response in 30 mins</strong>
+                                <small>Weekdays 9am–9pm IST</small>
+                            </div>
+                        </div>
+                        <div class="page-badge">
+                            <span class="badge-icon">🧭</span>
+                            <div>
+                                <strong>Solution guidance</strong>
+                                <small>Blueprint to rollout</small>
+                            </div>
+                        </div>
+                        <div class="page-badge">
+                            <span class="badge-icon">🛠️</span>
+                            <div>
+                                <strong>On-site support</strong>
+                                <small>Metro in 72 hours</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-hero-visual">
+                    <div class="hero-visual-frame">
+                        <img src="assets/images/background/contact-bg-3.jpg" alt="Support team discussing smart solutions">
+                        <div class="hero-visual-overlay"></div>
+                        <div class="hero-visual-badge">
+                            <span class="badge-icon">📡</span>
+                            <div>
+                                <strong>Live dashboards</strong>
+                                <small>Energy • Security • Comfort</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- ================= CONTACT SECTION ================= -->
+<section class="section-block contact-page-section">
+<div class="container contact-page-grid">
+
+  <!-- IMAGE (LEFT OF FORM) -->
+  <div class="contact-image">
+    <img src="assets/images/resource/contact.avif" alt="Dharti IoT Office">
+  </div>
+
+  <!-- CONTACT FORM -->
+  <form id="contactForm" class="contact-form">
+    <div class="form-row">
+      <div class="form-field">
+        <label>Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label>Phone</label>
+        <input type="tel" name="phone">
+      </div>
+      <div class="form-field">
+        <label>Subject</label>
+        <input type="text" name="subject">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Message</label>
+      <textarea name="message" rows="4" required></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <a href="tel:+917070868686" class="btn btn-secondary">Call Now</a>
+    </div>
+
+    <div class="status-msg" id="statusMsg"></div>
+  </form>
+
+</div>
+</section>
+
+        <!-- Locations -->
+       <!-- <section class="section-block location-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div>
+                        <p class="section-label">Our Offices</p>
+                        <h2 class="section-title">Find Us Across India</h2>
+                        <p class="section-text">Regional hubs with on-site engineers and solution consultants.</p>
+                    </div>
+                </div>
+                <div class="location-grid">
+                    <div class="location-card">
+                        <div class="icon-badge">🧭</div>
+                        <h3>Mumbai (HQ)</h3>
+                        <p>123 IoT Avenue, Tech City, Mumbai 400001</p>
+                        <span class="loc-line">📞 +91 12345 67890</span>
+                        <span class="loc-line">✉️ info@dhartiiot.com</span>
+                    </div>
+                    <div class="location-card">
+                        <div class="icon-badge">🌐</div>
+                        <h3>Bengaluru</h3>
+                        <p>88 Cloud Park, ORR, Bengaluru 560037</p>
+                        <span class="loc-line">📞 +91 98765 43210</span>
+                        <span class="loc-line">✉️ south@dhartiiot.com</span>
+                    </div>
+                    <div class="location-card">
+                        <div class="icon-badge">🏢</div>
+                        <h3>Delhi NCR</h3>
+                        <p>5 Connaught Place, New Delhi 110001</p>
+                        <span class="loc-line">📞 +91 90123 45678</span>
+                        <span class="loc-line">✉️ north@dhartiiot.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Map Section -->
+        <!--<section class="section-block map-section">
+            <div class="map-embed">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.914903177698!2d72.8777!3d19.0724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzIxLjYiTiA3MsKwNTInMzkuNyJF!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main> -->
+    
+
+
+
+
+    <!-- ================= CONTACT INFO + MAP ================= -->
+<section class="section-block" style="padding:60px 0; background:#f8f9fc;">
+
+  <!-- BLINK ANIMATION -->
+  <style>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255,0,0,0.6);
+      }
+      70% {
+        transform: scale(1.3);
+        box-shadow: 0 0 0 10px rgba(255,0,0,0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255,0,0,0);
+      }
+    }
+  </style>
+
+  <div class="container"
+    style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; max-width:1200px; margin:auto; padding:0 20px;">
+
+    <!-- CONTACT INFO (LEFT) -->
+    <div class="contact-info-cards">
+      <div class="info-card" style="margin-bottom:20px;">
+        <strong>📍 Address</strong>
+        <p>Dharti Automation, Maurya Lok, Patna-800001</p>
+      </div>
+
+      <div class="info-card" style="margin-bottom:20px;">
+        <strong>📞 Phone</strong>
+        <p>+91 7070868686</p>
+      </div>
+
+    
+      <div class="info-card">
+        <strong>✉️ Email</strong>
+        <p>info@dhartiautomation.com</p>
+      </div>
+    </div>
+
+    <!-- MAP (RIGHT) -->
+    <div class="map-container"
+      style="position:relative; width:100%; max-width:800px; margin-left:auto;">
+
+      <img src="assets/images/resource/mapIndia.svg"
+        alt="India Map"
+        style="width:100%; display:block; border-radius:15px;">
+
+      <!-- Patna Marker -->
+      <div
+        style="
+          position:absolute;
+          top:45%;
+          left:55%;
+          width:14px;
+          height:14px;
+          background:red;
+          border-radius:50%;
+          cursor:pointer;
+          animation:pulse 1.8s infinite;
+        "
+        onmouseover="this.children[0].style.display='block'"
+        onmouseout="this.children[0].style.display='none'"
+      >
+        <span
+          style="
+            position:absolute;
+            bottom:25px;
+            left:-70px;
+            background:#000;
+            color:#fff;
+            padding:6px 10px;
+            font-size:12px;
+            border-radius:4px;
+            white-space:nowrap;
+            display:none;
+          "
+        >
+          📍 Marketing Office – Maurya Lok Complex, Block-A <br>
+          5th Floor, New Dak Bunglow Rd, <br>
+          Patna, Bihar-800001
+        </span>
+      </div>
+
+      <!-- Delhi Marker -->
+      <div
+        style="
+          position:absolute;
+          top:60%;
+          left:50%;
+          width:14px;
+          height:14px;
+          background:red;
+          border-radius:50%;
+          cursor:pointer;
+          animation:pulse 1.8s infinite;
+        "
+        onmouseover="this.children[0].style.display='block'"
+        onmouseout="this.children[0].style.display='none'"
+      >
+        <span
+          style="
+            position:absolute;
+            bottom:25px;
+            left:-40px;
+            background:#000;
+            color:#fff;
+            padding:6px 10px;
+            font-size:12px;
+            border-radius:4px;
+            white-space:nowrap;
+            display:none;
+          "
+        >
+          📍 M-55, M Block Market, GK-2, Delhi
+        </span>
+      </div>
+
+
+      <!-- Maharashtra Marker -->
+<div
+  style="
+    position:absolute;
+    top:58%;
+    left:52%;
+    width:14px;
+    height:14px;
+    background:red;
+    border-radius:50%;
+    cursor:pointer;
+    animation:pulse 1.8s infinite;
+  "
+  onmouseover="this.children[0].style.display='block'"
+  onmouseout="this.children[0].style.display='none'"
+>
+  <span
+    style="
+      position:absolute;
+      bottom:25px;
+      left:-55px;
+      background:#000;
+      color:#fff;
+      padding:6px 10px;
+      font-size:12px;
+      border-radius:4px;
+      white-space:nowrap;
+      display:none;
+    "
+  >
+    📍 Dharti Automation Dreame Balle Vue, <br> Uttam Nagr, Bhunde Vasti, br Bavdhan(Pure-Maharashtra 411021)
+  </span>
+</div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+
+
+
+      <!--<footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+                </div>
+                <p>Leading provider of smart home automation and IoT solutions. We transform spaces into intelligent environments that enhance comfort, security, and energy efficiency.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Service.html">Services</a></li>
+                    <li><a href="Oem-facility.html">OEM Facility</a></li>
+                    <li><a href="enquiry.html">Make Enquiry</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i>📍</i>Dharti Automation, Maurya Lok, Block-A, 5th Floor, Budh Vihar, Dak Bangla Chouraha, Patna-800001</li>
+                    <li><i>📞</i> +91 7070868686</li>
+                    <li><i>✉️</i>info@dhartiautomation.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dharti IoT. All rights reserved.</p>
+        </div>
+    </footer> -->
+    
+
+
+<div class="video-footer-wrapper" style="position:relative;width:100%;height:65vh;overflow:hidden;">
+
+    <video autoplay muted loop
+        style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/video/company.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY CONTENT -->
+    <div class="video-footer-overlay"
+         style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            padding:40px 60px;
+            box-sizing:border-box;
+            color:white;
+            z-index:2;
+         ">
+
+        <!-- LEFT SIDE -->
+<div class="footer-left dropdown">
+    <h4 class="dropdown-btn">Quick Links ▾</h4>
+
+    <ul class="dropdown-content">
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Product.html">Products</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Oem-facility.html">OEM Facility</a></li>
+        <li><a href="enquiry.html">Make Enquiry</a></li>
+    </ul>
+</div>
+
+
+
+        <!-- RIGHT SIDE -->
+        <div class="footer-right dropdown">
+    <h4 class="dropdown-btn">Contact Us ▾</h4>
+
+    <div class="dropdown-content contact-content">
+        <p>
+            📍 Dharti Automation, Maurya Lok,<br>
+            Block-A, 5th Floor, Budh Vihar,<br>
+            Dak Bangla Chouraha, Patna – 800001
+        </p>
+        <p>📞 +91 7070868686</p>
+        <p>✉️ info@dhartiautomation.com</p>
+
+        <div class="social-links">
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">📷</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script>
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("ZXMQlVbl_YZB8pKwt"); // 👈 tumhara Public Key
+    })();
+
+    // Handle form submit
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const status = document.getElementById("statusMsg");
+        status.style.color = "black";
+        status.innerHTML = "Sending message...";
+
+        emailjs.sendForm(
+            "service_2ou4g5w",     // 👈 tumhara Service ID
+            "template_j4n9cug",    // 👈 tumhara Template ID
+            this
+        )
+        .then(() => {
+            status.style.color = "green";
+            status.innerHTML = "Message sent successfully!";
+            this.reset();
+        })
+        .catch((error) => {
+            status.style.color = "red";
+            status.innerHTML = "Failed to send message!";
+            console.error("EmailJS Error:", error);
+        });
+    });
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

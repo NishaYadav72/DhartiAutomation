@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Dharti IoT</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="Home.html" class="logo">
+    <div class="logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+            
+            <nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Product.html" class="nav-link dropdown-toggle">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Product.html" class="nav-link">All Products</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Service.html" class="nav-link dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Service.html" class="nav-link">All Services</a></li>
+                            <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
+                            <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
+                            <li><a href="consunting.html" class="nav-link">Consulting</a></li>
+                            <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
+                    <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+<!-- Product Detail Hero -->
+<section class="page-hero product-detail-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="container page-hero-inner">
+    <!-- LEFT CONTENT -->
+    <div class="page-hero-text">
+      <div class="breadcrumb-nav">
+        <a href="Product.html">Products</a>
+        <span class="separator">/</span>
+        <span>Empower Farms: Smart Nutrients & Drip Irrigation</span>
+      </div>
+
+      <h1 class="page-hero-title">
+        Empower Farms: Smart Nutrients & Drip Irrigation
+      </h1>
+
+      <p class="page-hero-subtitle">
+        Dharti Automation’s Smart Nutrition Controller uses IoT and precision sensors
+        to monitor temperature, humidity, and soil nutrition in real time.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#purchase" class="btn btn-primary">🛒 Buy Now</a>
+        <a href="#specs" class="btn btn-secondary">📄 View Specs</a>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE SLIDER -->
+    <div class="page-hero-visual">
+      <div class="hero-slider">
+
+        <!-- Arrow Left -->
+        <button class="slider-arrow left" onclick="prevSlide()">❮</button>
+
+        <!-- Images -->
+        <img class="slide active" src="assets/images/resource/AgriBanner.png">
+        <img class="slide" src="assets/images/resource/2nd.jpeg">
+        <img class="slide" src="assets/images/resource/3rd.jpeg">
+        <img class="slide" src="assets/images/resource/4th.jpeg">
+        <img class="slide" src="assets/images/resource/5th.jpeg">
+        <img class="slide" src="assets/images/resource/6th.jpeg">
+        <img class="slide" src="assets/images/resource/7th.jpeg">
+        <img class="slide" src="assets/images/resource/8.jpeg">
+        <img class="slide" src="assets/images/resource/9.jpeg">
+
+        <!-- Arrow Right -->
+        <button class="slider-arrow right" onclick="nextSlide()">❯</button>
+
+        <!-- Badge -->
+        <div class="hero-visual-badge">
+          ⭐ Best Seller <br><small>2-year warranty</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+       <!-- Product Summary -->
+<!-- Product Summary -->
+<section 
+  class="section-block product-summary-section" 
+  id="purchase"
+  style="background:#f5f7fb; padding:60px 0;"
+>
+  <div class="container">
+    <div 
+      class="product-summary" 
+      style="
+        display:flex;
+        gap:40px;
+        align-items:center;
+        background:#ffffff;
+        padding:40px;
+        border-radius:16px;
+        box-shadow:0 20px 40px rgba(0,0,0,0.08);
+      "
+    >
+
+      <!-- IMAGE -->
+      <div 
+        class="summary-visual" 
+        style="
+          flex:1;
+          display:flex;
+          justify-content:center;
+        "
+      >
+        <img 
+          id="summary-image" 
+          src="assets/images/resource/AgriBanner.png" 
+          alt="Smart Agriculture Product"
+          style="
+            width:100%;
+            max-width:380px;
+            border-radius:14px;
+            box-shadow:0 15px 30px rgba(0,0,0,0.15);
+          "
+        >
+      </div>
+
+      <!-- INFO -->
+      <div class="summary-info" style="flex:1.2;">
+
+        <!-- PRICE -->
+        <div 
+          class="price-row" 
+          style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:16px;
+          "
+        >
+          <div>
+            <div 
+              class="price" 
+              style="
+                font-size:32px;
+                font-weight:700;
+                color:#166534;
+              "
+            >
+              Smart Farming Solution
+            </div>
+            <div 
+              class="price-note" 
+              style="color:#64748b;"
+            >
+              IoT-powered agriculture automation
+            </div>
+          </div>
+
+          <div 
+            style="
+              background:#dcfce7;
+              color:#166534;
+              padding:6px 14px;
+              border-radius:20px;
+              font-weight:600;
+              font-size:14px;
+            "
+          >
+            Ready to Deploy
+          </div>
+        </div>
+
+        <!-- META -->
+        <div 
+          class="summary-meta" 
+          style="
+            display:flex;
+            gap:12px;
+            margin-bottom:18px;
+          "
+        >
+          <span style="background:#ecfeff; color:#155e75; padding:6px 10px; border-radius:8px;">Real-time Monitoring</span>
+          <span style="background:#f0fdf4; color:#166534; padding:6px 10px; border-radius:8px;">Water Efficient</span>
+          <span style="background:#fff7ed; color:#9a3412; padding:6px 10px; border-radius:8px;">Smart Nutrients</span>
+        </div>
+
+        <!-- DESC -->
+        <p 
+          style="
+            color:#334155;
+            font-size:16px;
+            line-height:1.6;
+            margin-bottom:22px;
+          "
+        >
+          Dharti Automation’s Smart Nutrition Controller for Plant uses IoT and precision sensors 
+          to monitor temperature, humidity, and soil nutrition in real time, ensuring optimal 
+          growth with automated nutrient delivery.
+        </p>
+
+        <!-- BUTTONS -->
+        <div 
+          class="purchase-actions" 
+          style="
+            display:flex;
+            gap:14px;
+            margin-bottom:22px;
+          "
+        >
+          <a 
+            href="Contact.html"
+            style="
+              background:#16a34a;
+              color:#fff;
+              padding:12px 22px;
+              border-radius:10px;
+              font-weight:600;
+              text-decoration:none;
+              box-shadow:0 10px 20px rgba(22,163,74,0.35);
+            "
+          >
+            🌱 Get Solution
+          </a>
+
+          <a 
+            href="#inquiry-form"
+            style="
+              border:2px solid #16a34a;
+              color:#16a34a;
+              padding:12px 22px;
+              border-radius:10px;
+              font-weight:600;
+              text-decoration:none;
+              background:#ffffff;
+            "
+          >
+            📞 Request Demo
+          </a>
+        </div>
+
+        <!-- BULLETS -->
+        <ul style="list-style:none; padding:0; margin-top:20px;">
+
+          <li style="display:flex; gap:10px; padding:10px 14px; margin-bottom:10px; background:#f1f5f9; border-left:4px solid #16a34a; border-radius:8px;">
+            <span style="color:#16a34a;">✔</span>
+            <span>Real-time soil moisture, temperature & humidity monitoring</span>
+          </li>
+
+          <li style="display:flex; gap:10px; padding:10px 14px; margin-bottom:10px; background:#f0fdf4; border-left:4px solid #22c55e; border-radius:8px;">
+            <span style="color:#22c55e;">✔</span>
+            <span>Automated nutrient & drip irrigation control</span>
+          </li>
+
+          <li style="display:flex; gap:10px; padding:10px 14px; margin-bottom:10px; background:#fff7ed; border-left:4px solid #ea580c; border-radius:8px;">
+            <span style="color:#ea580c;">✔</span>
+            <span>Crop-specific intelligent recommendations</span>
+          </li>
+
+          <li style="display:flex; gap:10px; padding:10px 14px; background:#ecfeff; border-left:4px solid #0891b2; border-radius:8px;">
+            <span style="color:#0891b2;">✔</span>
+            <span>Mobile & web dashboard for farmers</span>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Highlights -->
+<section 
+  class="section-block product-features-section"
+  style="background:#0f172a; padding:60px 0;"
+>
+  <div class="container">
+
+    <!-- Section Header -->
+    <div 
+      class="section-header center"
+      style="text-align:center; margin-bottom:40px;"
+    >
+      <h2 
+        class="section-title"
+        style="color:lightblue; font-size:32px; margin-bottom:10px;"
+      >
+        Smart Agriculture Highlights
+      </h2>
+      <p 
+        class="section-text"
+        style="color:#94a3b8; font-size:16px;"
+      >
+        Intelligent farming powered by IoT, automation, and precision control.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div 
+      style="
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:24px;
+      "
+    >
+
+      <!-- CARD 1 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #dbeafe; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; display:flex; align-items:center; justify-content:center;
+          border-radius:50%; background:#dbeafe; color:#2563eb;">🌱</div>
+
+        <h4 style="color:#0f172a;">Real-Time Crop Monitoring</h4>
+        <p style="color:#475569;">Live tracking of soil moisture, temperature, and humidity.</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #dcfce7; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          background:#dcfce7; color:#16a34a;">💧</div>
+
+        <h4 style="color:#0f172a;">Smart Drip Irrigation</h4>
+        <p style="color:#475569;">Automatic water flow based on soil and crop needs.</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #ede9fe; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          background:#ede9fe; color:#7c3aed;">🧪</div>
+
+        <h4 style="color:#0f172a;">Smart Nutrient Control</h4>
+        <p style="color:#475569;">Precision nutrient delivery for healthier plant growth.</p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #ffedd5; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          background:#ffedd5; color:#ea580c;">📱</div>
+
+        <h4 style="color:#0f172a;">Mobile & Web Dashboard</h4>
+        <p style="color:#475569;">Monitor and control your farm anytime, anywhere.</p>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #ccfbf1; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          background:#ccfbf1; color:#0f766e;">🌍</div>
+
+        <h4 style="color:#0f172a;">Sustainable Farming</h4>
+        <p style="color:#475569;">Reduces water waste and optimizes resource usage.</p>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="feature-card"
+        style="background:#ffffff; padding:24px; border-radius:16px;
+        box-shadow:0 12px 30px rgba(0,0,0,0.08);
+        border:1px solid #fee2e2; transition:0.3s;"
+        onmouseover="this.style.transform='translateY(-8px)'"
+        onmouseout="this.style.transform='translateY(0)'">
+
+        <div style="font-size:30px; margin-bottom:12px;
+          width:56px; height:56px; border-radius:50%;
+          display:flex; align-items:center; justify-content:center;
+          background:#fee2e2; color:#dc2626;">🛠️</div>
+
+        <h4 style="color:#0f172a;">Easy Installation</h4>
+        <p style="color:#475569;">Farmer-friendly setup with minimal maintenance.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+        <!-- Smart Nutrition Controller Specifications -->
+<!-- Smart Nutrition Controller Specifications -->
+<section 
+    class="section-block product-specs-section" 
+    id="specs"
+    style="background:#f8fafc; padding:80px 0;"
+>
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 20px;">
+
+        <!-- Section Header -->
+        <div class="section-header" style="text-align:center; margin-bottom:50px;">
+            <p class="section-label" style="color:#4f46e5; font-weight:600; letter-spacing:1px; margin-bottom:6px;">Specifications</p>
+<h2 class="section-title" style="color:#0f172a; font-size:32px; margin:0; text-align:left;">
+    Smart Agriculture Technical Details
+</h2>
+        </div>
+
+        <!-- Specs Grid -->
+        <div class="specs-grid" id="specs-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">
+
+            <!-- Row 1: Spec Card 1 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Technology</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">IoT Based Smart System</strong>
+            </div>
+
+            <!-- Spec Card 2 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Sensors</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">Soil, Temperature & Humidity Sensors</strong>
+            </div>
+
+            <!-- Spec Card 3 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Nutrient Control</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">Automatic Nutrient Release</strong>
+            </div>
+
+            <!-- Row 2: Spec Card 4 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Monitoring</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">Real-Time Plant Health Tracking</strong>
+            </div>
+
+            <!-- Spec Card 5 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Water System</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">Drip Irrigation Compatible</strong>
+            </div>
+
+            <!-- Spec Card 6 -->
+            <div class="spec-card" style="background:#ffffff; padding:24px 20px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:all 0.3s ease;">
+                <span style="display:block; font-size:14px; color:#64748b; margin-bottom:6px;">Application</span>
+                <strong style="font-size:16px; color:#0f172a; font-weight:600;">Smart Farming & Precision Agriculture</strong>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+        <!-- Smart Agriculture Compatibility -->
+<section 
+    class="section-block product-compat-section" 
+    style="background:#f8fafc; padding:60px 0;"
+>
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 20px;">
+        <div 
+            class="compat-card" 
+            style="
+                display:flex; 
+                flex-wrap:wrap; 
+                gap:40px; 
+                align-items:center; 
+                background:#ffffff; 
+                padding:40px; 
+                border-radius:16px; 
+                box-shadow:0 15px 35px rgba(0,0,0,0.08);
+            "
+        >
+            <!-- INFO -->
+            <div style="flex:1; min-width:280px;">
+                <p style="color:#4f46e5; font-weight:600; letter-spacing:1px; margin-bottom:6px;">Compatibility</p>
+                <h3 style="color:#0f172a; font-size:28px; margin-bottom:12px;">Works with Leading Smart Agriculture Systems</h3>
+                <p style="color:#475569; font-size:16px; line-height:1.6; margin-bottom:18px;">
+                    Seamlessly integrates with popular smart farming platforms and irrigation systems for automated crop management and monitoring.
+                </p>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:15px; color:#334155;">
+                        <span style="color:#16a34a; font-size:18px;">✔</span>
+                        Supports Drip Irrigation Controllers
+                    </li>
+                    <li style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:15px; color:#334155;">
+                        <span style="color:#2563eb; font-size:18px;">✔</span>
+                        Compatible with IoT Crop Monitoring Platforms
+                    </li>
+                    <li style="display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:15px; color:#334155;">
+                        <span style="color:#dc2626; font-size:18px;">✔</span>
+                        Works with Smart Fertilizer Dispensers
+                    </li>
+                    <li style="display:flex; align-items:center; gap:10px; font-size:15px; color:#334155;">
+                        <span style="color:#7c3aed; font-size:18px;">✔</span>
+                        Supports Mobile & Cloud-based Management
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BADGES -->
+            <div style="flex:1; min-width:220px; display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-start;">
+                <span style="background:#dcfce7; color:#166534; padding:8px 16px; border-radius:20px; font-weight:600;">Drip Irrigation</span>
+                <span style="background:#e0f2fe; color:#0369a1; padding:8px 16px; border-radius:20px; font-weight:600;">IoT Platforms</span>
+                <span style="background:#ede9fe; color:#7c3aed; padding:8px 16px; border-radius:20px; font-weight:600;">Fertilizer Control</span>
+                <span style="background:#fff7ed; color:#ea580c; padding:8px 16px; border-radius:20px; font-weight:600;">Cloud Monitoring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+       
+<!-- Smart Agriculture Box & Warranty -->
+<section 
+    class="section-block product-box-section" 
+    style="background:#f0fdf4; padding:60px 0;"
+>
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 20px;">
+        <div 
+            class="box-grid" 
+            style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;"
+        >
+            <!-- Box Card: In the Box -->
+            <div 
+                class="box-card" 
+                style="
+                    flex:1; 
+                    min-width:280px; 
+                    background:#ffffff; 
+                    padding:30px; 
+                    border-radius:16px; 
+                    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+                "
+            >
+                <p style="color:#16a34a; font-weight:600; letter-spacing:1px; margin-bottom:6px;">In the Box</p>
+                <h3 style="color:#0f172a; font-size:24px; margin-bottom:18px;">What’s Included</h3>
+                <ul style="list-style:none; padding:0; margin:0; color:#334155; font-size:15px;">
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#16a34a; font-size:18px;">✔</span> Smart Nutrition Controller Device
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#16a34a; font-size:18px;">✔</span> Drip Irrigation Adapter & Mounting Screws
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#16a34a; font-size:18px;">✔</span> Quick Start Guide for Smart Farming
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px;">
+                        <span style="color:#16a34a; font-size:18px;">✔</span> Safety & Warranty Card
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Box Card: Warranty & Support -->
+            <div 
+                class="box-card" 
+                style="
+                    flex:1; 
+                    min-width:280px; 
+                    background:#ffffff; 
+                    padding:30px; 
+                    border-radius:16px; 
+                    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+                "
+            >
+                <p style="color:#2563eb; font-weight:600; letter-spacing:1px; margin-bottom:6px;">Warranty & Support</p>
+                <h3 style="color:#0f172a; font-size:24px; margin-bottom:18px;">We’ve Got You Covered</h3>
+                <ul style="list-style:none; padding:0; margin:0; color:#334155; font-size:15px;">
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#2563eb; font-size:18px;">✔</span> 24-month hardware warranty
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#2563eb; font-size:18px;">✔</span> Free replacement in select regions
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:10px;">
+                        <span style="color:#2563eb; font-size:18px;">✔</span> OTA firmware updates for Smart Farming
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:10px;">
+                        <span style="color:#2563eb; font-size:18px;">✔</span> Priority support for agriculture projects
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+        <!-- Inquiry Form -->
+<section 
+    class="section-block product-inquiry-section" 
+    id="inquiry-form"
+    style="background:#ecfdf5; padding:80px 0;"
+>
+    <div class="container" style="max-width:900px; margin:0 auto; padding:0 20px;">
+        <!-- Section Header -->
+        <div class="section-header center" style="text-align:center; margin-bottom:40px;">
+            <div>
+                <p class="section-label" style="color:#16a34a; font-weight:600; letter-spacing:1px; margin-bottom:6px;">Purchase / Quote</p>
+                <h2 class="section-title" style="color:#0f172a; font-size:32px; margin-bottom:10px;">Ready to Order?</h2>
+                <p class="section-text" style="color:#334155; font-size:16px;">Tell us your requirements and we’ll share pricing and lead times within 24 hours.</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="inquiry-form-container" style="background:#ffffff; padding:40px; border-radius:16px; box-shadow:0 15px 35px rgba(0,0,0,0.08);">
+            <form class="inquiry-form" onsubmit="handleProductInquiry(event)">
+                <div class="form-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="buyer-name" style="color:#0f172a; font-weight:600;">Full Name *</label>
+                        <input type="text" id="buyer-name" name="buyer_name" required
+                               style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a;">
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="buyer-email" style="color:#0f172a; font-weight:600;">Email *</label>
+                        <input type="email" id="buyer-email" name="buyer_email" required
+                               style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a;">
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="buyer-phone" style="color:#0f172a; font-weight:600;">Phone *</label>
+                        <input type="tel" id="buyer-phone" name="buyer_phone" required
+                               style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a;">
+                    </div>
+                    <!-- Company -->
+                    <div class="form-group">
+                        <label for="buyer-company" style="color:#0f172a; font-weight:600;">Company</label>
+                        <input type="text" id="buyer-company" name="buyer_company"
+                               style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a;">
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="form-group">
+                        <label for="quantity" style="color:#0f172a; font-weight:600;">Quantity *</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="10" required
+                               style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a;">
+                    </div>
+                    
+                    <!-- Timeline -->
+                    <div class="form-group">
+                        <label for="timeline" style="color:#0f172a; font-weight:600;">Desired Delivery</label>
+                        <select id="timeline" name="timeline"
+                                style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a; background:#f9fafb;">
+                            <option value="ASAP">ASAP</option>
+                            <option value="2-3 weeks">2-3 weeks</option>
+                            <option value="4-6 weeks">4-6 weeks</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <!-- Notes -->
+                    <div class="form-group full-width" style="grid-column:1/-1;">
+                        <label for="notes" style="color:#0f172a; font-weight:600;">Project Details / Notes</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Tell us about mounting, integrations, or special requirements..."
+                                  style="width:100%; padding:12px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; color:#0f172a; background:#f9fafb;"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions" style="margin-top:25px; text-align:center;">
+                    <button type="submit" 
+                            class="btn btn-primary"
+                            style="background:#16a34a; color:#fff; padding:12px 28px; font-weight:600; border-radius:10px; font-size:16px; cursor:pointer; box-shadow:0 8px 20px rgba(22,163,52,0.35);">
+                        <span class="btn-icon">✉️</span> Send Request
+                    </button>
+                    <p class="form-note" style="color:#334155; font-size:14px; margin-top:12px;">We respond within 24 hours with pricing and next steps.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    </main>
+    
+    <!-- <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+    <div class="footer-logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+    </div>
+
+                <p>Leading provider of smart home automation and IoT solutions. We transform spaces into intelligent environments that enhance comfort, security, and energy efficiency.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Service.html">Services</a></li>
+                    <li><a href="Oem-facility.html">OEM Facility</a></li>
+                    <li><a href="enquiry.html">Make Enquiry</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i>📍</i>Dharti Automation, Maurya Lok, Block-A, 5th Floor, Budh Vihar, Dak Bangla Chouraha, Patna-800001</li>
+                    <li><i>📞</i> +91 7070868686</li>
+                    <li><i>✉️</i>info@dhartiautomation.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dharti IoT. All rights reserved.</p>
+        </div>
+    </footer> -->
+    
+
+    <div class="video-footer-wrapper" style="position:relative;width:100%;height:65vh;overflow:hidden;">
+
+    <video autoplay muted loop
+        style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/video/company.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY CONTENT -->
+    <div class="video-footer-overlay"
+         style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            padding:40px 60px;
+            box-sizing:border-box;
+            color:white;
+            z-index:2;
+         ">
+
+        <!-- LEFT SIDE -->
+<div class="footer-left dropdown">
+    <h4 class="dropdown-btn">Quick Links ▾</h4>
+
+    <ul class="dropdown-content">
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Product.html">Products</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Oem-facility.html">OEM Facility</a></li>
+        <li><a href="enquiry.html">Make Enquiry</a></li>
+    </ul>
+</div>
+
+
+
+        <!-- RIGHT SIDE -->
+        <div class="footer-right dropdown">
+    <h4 class="dropdown-btn">Contact Us ▾</h4>
+
+    <div class="dropdown-content contact-content">
+        <p>
+            📍 Dharti Automation, Maurya Lok,<br>
+            Block-A, 5th Floor, Budh Vihar,<br>
+            Dak Bangla Chouraha, Patna – 800001
+        </p>
+        <p>📞 +91 7070868686</p>
+        <p>✉️ info@dhartiautomation.com</p>
+
+        <div class="social-links">
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">📷</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const productConfigs = {
+            'touch-switch': {
+                name: 'Empower Farms:Smart Nutrients & Drip Irrigation',
+                title: 'Empower Farms:Smart Nutrients & Drip Irrigation',
+                subtitle: 'Dharti Automation’s Smart Nutrition Controller for Plant uses IoT and precision sensors to monitor temperature, humidity, and soil nutrition in real time.',
+                badge: 'Best Seller',
+                price: '$129',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project2-1.jpg',
+                desc: 'Elegant touch switch with tempered glass, RGB indicators, neutral-free wiring, and app/voice control.',
+                bullets: [
+                    'WiFi + Zigbee + Matter-ready hardware',
+                    'Supports dimming, scenes, and schedules',
+                    'Tempered glass with RGB feedback LEDs',
+                    'Works with Alexa, Google, Siri Shortcuts'
+                ],
+                specs: {
+                    connectivity: 'WiFi 2.4GHz / Zigbee / Matter-ready',
+                    power: '100-240V AC',
+                    load: '10A per gang',
+                    materials: 'Tempered glass, ABS',
+                    integrations: 'Alexa, Google, Matter-ready',
+                    warranty: '24 months'
+                },
+                compat: ['Alexa', 'Google', 'Matter Ready', 'Zigbee'],
+                faqNeutral: 'Neutral-free option available for 1-4 gang variants.',
+                faqIntegrations: 'Alexa, Google, Matter-ready hardware, Zigbee, and open APIs.'
+            },
+            'touch-panel': {
+                name: 'Smart Touch Panel',
+                title: 'Smart Touch Panel (7\" Hub)',
+                subtitle: 'Wall-mounted automation hub with scene widgets, intercom, and camera feeds.',
+                badge: 'New',
+                price: '$289',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project3-1.jpg',
+                desc: '7-inch LCD hub with PoE, edge AI, video doorbell feed, and multi-room scene control.',
+                bullets: [
+                    'PoE powered with backup battery option',
+                    'Edge AI for occupancy and gestures',
+                    'Doorbell video feed + intercom',
+                    'Supports Matter, Zigbee, WiFi devices'
+                ],
+                specs: {
+                    connectivity: 'WiFi / PoE / Zigbee / Matter-ready',
+                    power: 'PoE (48V) / DC 12V',
+                    load: 'N/A (controller)',
+                    materials: 'Glass + aluminum frame',
+                    integrations: 'Alexa, Google, RTSP, Matter-ready',
+                    warranty: '24 months'
+                },
+                compat: ['Alexa', 'Google', 'Matter Ready', 'Zigbee', 'RTSP'],
+                faqNeutral: 'No neutral required (PoE powered controller).',
+                faqIntegrations: 'Works with Matter-ready devices, Zigbee, WiFi, Alexa, Google.'
+            },
+            'retrofit': {
+                name: 'Retrofit Module',
+                title: 'Retrofit Switch Module',
+                subtitle: 'Drop-in module to upgrade legacy switches without rewiring.',
+                badge: 'Bundle',
+                price: '$89',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project1-2.jpg',
+                desc: 'Compact module installs behind existing switches for instant smart control with schedules and voice.',
+                bullets: [
+                    'Neutral-free option for legacy wiring',
+                    'Supports 10A load per channel',
+                    'App, voice, and physical control',
+                    'Works with Alexa, Google, Matter-ready'
+                ],
+                specs: {
+                    connectivity: 'WiFi / Zigbee / Matter-ready',
+                    power: '100-240V AC',
+                    load: '10A per channel',
+                    materials: 'PC-ABS, flame-retardant',
+                    integrations: 'Alexa, Google, Matter-ready',
+                    warranty: '18 months'
+                },
+                compat: ['Alexa', 'Google', 'Matter Ready', 'Zigbee'],
+                faqNeutral: 'Neutral-free option available; neutral recommended for inductive loads.',
+                faqIntegrations: 'Alexa, Google, Matter-ready hardware, Zigbee.'
+            },
+            'energy-monitor': {
+                name: 'Energy Monitor',
+                title: 'Smart Energy Monitor',
+                subtitle: 'Real-time energy analytics with solar net-metering and alerts.',
+                badge: 'Energy',
+                price: '$199',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project4-1.jpg',
+                desc: 'Clamp-based energy monitor with live dashboards, anomaly detection, and exportable reports.',
+                bullets: [
+                    '3-phase compatible clamp sensors',
+                    'Cloud + local dashboards',
+                    'Solar net-metering support',
+                    'Webhooks and API for BMS'
+                ],
+                specs: {
+                    connectivity: 'WiFi / Ethernet (optional)',
+                    power: '100-240V AC',
+                    load: 'Up to 200A clamps',
+                    materials: 'Industrial PC + sensors',
+                    integrations: 'REST/Webhooks, Alexa energy, Google Home',
+                    warranty: '24 months'
+                },
+                compat: ['Alexa', 'Google', 'REST API'],
+                faqNeutral: 'Requires neutral for power; sensors are clamp-on.',
+                faqIntegrations: 'Alexa energy dashboard, Google Home energy, REST/Webhooks.'
+            },
+            'smart-lock': {
+                name: 'Smart Lock',
+                title: 'Smart Lock with Fingerprint',
+                subtitle: 'Keyless entry with PIN, NFC, fingerprint, and guest code management.',
+                badge: 'Security',
+                price: '$239',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project5-2.jpg',
+                desc: 'IP54-rated smart lock with multi-factor unlock options, audit logs, and auto-lock schedules.',
+                bullets: [
+                    'Fingerprint, PIN, NFC, mobile app',
+                    'BLE + WiFi gateway for remote',
+                    'Audit trail and alerts',
+                    'Auto-lock and geofence options'
+                ],
+                specs: {
+                    connectivity: 'BLE + WiFi gateway',
+                    power: '4x AA or rechargeable pack',
+                    load: 'N/A (lock)',
+                    materials: 'Zinc alloy + tempered glass',
+                    integrations: 'Alexa, Google (via gateway)',
+                    warranty: '18 months'
+                },
+                compat: ['Alexa', 'Google', 'BLE'],
+                faqNeutral: 'Battery powered; no neutral needed.',
+                faqIntegrations: 'Alexa/Google via WiFi gateway; BLE local control.'
+            },
+            'thermostat': {
+                name: 'Smart Thermostat',
+                title: 'Smart Thermostat',
+                subtitle: 'Adaptive climate control with occupancy sensing and insights.',
+                badge: 'Climate',
+                price: '$179',
+                priceNote: 'per unit, taxes extra',
+                image: 'assets/images/resource/project3-2.jpg',
+                desc: 'Smart thermostat supporting HVAC/heat pump, schedules, remote sensors, and energy savings.',
+                bullets: [
+                    'HVAC/Heat Pump compatible',
+                    'Occupancy and temp sensors',
+                    'Adaptive schedules and eco mode',
+                    'Matter, Alexa, Google support'
+                ],
+                specs: {
+                    connectivity: 'WiFi / Matter-ready',
+                    power: '24V (C-wire) or adapter',
+                    load: 'HVAC control relays',
+                    materials: 'Glass + polycarbonate',
+                    integrations: 'Alexa, Google, Matter-ready',
+                    warranty: '24 months'
+                },
+                compat: ['Alexa', 'Google', 'Matter Ready'],
+                faqNeutral: 'Requires C-wire or supplied adapter for power.',
+                faqIntegrations: 'Matter-ready, Alexa, Google, local schedules.'
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productKey = urlParams.get('product') || 'touch-switch';
+        const config = productConfigs[productKey];
+
+        const productSelect = document.getElementById('product-select');
+        Object.keys(productConfigs).forEach(key => {
+            const opt = document.createElement('option');
+            opt.value = key;
+            opt.textContent = productConfigs[key].name;
+            if (key === productKey) opt.selected = true;
+            productSelect.appendChild(opt);
+        });
+
+        if (config) {
+            document.getElementById('product-name').textContent = config.name;
+            document.getElementById('product-title').textContent = config.title;
+            document.getElementById('product-subtitle').textContent = config.subtitle;
+            document.getElementById('product-badge').textContent = config.badge;
+            document.getElementById('product-price').textContent = config.price;
+            document.getElementById('product-price-note').textContent = config.priceNote;
+            document.getElementById('product-desc').textContent = config.desc;
+            //document.getElementById('hero-image').src = config.image;
+            //document.getElementById('summary-image').src = config.image;
+
+            const bullets = document.getElementById('product-bullets');
+            bullets.innerHTML = '';
+            config.bullets.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                bullets.appendChild(li);
+            });
+
+            document.getElementById('spec-connectivity').textContent = config.specs.connectivity;
+            document.getElementById('spec-power').textContent = config.specs.power;
+            document.getElementById('spec-load').textContent = config.specs.load;
+            document.getElementById('spec-materials').textContent = config.specs.materials;
+            document.getElementById('spec-integrations').textContent = config.specs.integrations;
+            document.getElementById('spec-warranty').textContent = config.specs.warranty;
+
+            const compatBadges = document.getElementById('compat-badges');
+            compatBadges.innerHTML = '';
+            config.compat.forEach(c => {
+                const span = document.createElement('span');
+                span.className = 'pill';
+                span.textContent = c;
+                compatBadges.appendChild(span);
+            });
+
+            document.getElementById('faq-neutral').textContent = config.faqNeutral;
+            document.getElementById('faq-integrations').textContent = config.faqIntegrations;
+        }
+
+        function handleProductInquiry(e) {
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(e.target));
+            console.log('Product inquiry', data);
+            alert('Thanks! We received your request and will reply within 24 hours.');
+            e.target.reset();
+        }
+    </script>
+
+
+<script>
+  let slides = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Auto slide every 3 seconds
+  setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html>

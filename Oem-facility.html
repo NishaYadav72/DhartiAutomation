@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEM Facility - Dharti IoT</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* ===== LOGO IMAGE FIX ===== */
+/* ===== HEADER LOGO FIX (BIG + CIRCLE) ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ===== LOGO BIG WITHOUT CHANGING NAVBAR HEIGHT ===== */
+header .logo-icon {
+  width: 42px;       /* navbar ke according base size */
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.3);   /* 🔥 YAHI MAGIC HAI */
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="Home.html" class="logo">
+<div class="logo-icon">
+  <img src="assets/images/logo.jpeg" alt="Logo">
+</div>
+            </a>
+            
+            <nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Product.html" class="nav-link dropdown-toggle">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Product.html" class="nav-link">All Products</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Service.html" class="nav-link dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Service.html" class="nav-link">All Services</a></li>
+                            <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
+                            <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
+                            <li><a href="consunting.html" class="nav-link">Consulting</a></li>
+                            <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
+                    <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- OEM Hero Banner -->
+        <section class="page-hero oem-hero">
+            <div class="hero-overlay"></div>
+            <div class="container page-hero-inner">
+                <div class="page-hero-text">
+                    <p class="section-label">OEM Manufacturing</p>
+                    <h1 class="page-hero-title">White-Label IoT Hardware Manufacturing</h1>
+                    <p class="page-hero-subtitle">Custom-engineered automation solutions with your brand identity—from retrofit systems to agricultural IoT.</p>
+                    <div class="hero-buttons">
+                        <a href="#oem-categories" class="btn btn-primary"><span class="btn-icon">⚙️</span>Explore Categories</a>
+                        <a href="#oem-download" class="btn btn-secondary"><span class="btn-icon">📥</span>Download OEM Plan</a>
+                    </div>
+                    <div class="page-hero-badges">
+                        <div class="page-badge">
+                            <span class="badge-icon">🏭</span>
+                            <div>
+                                <strong>ISO-certified</strong>
+                                <small>Quality assurance</small>
+                            </div>
+                        </div>
+                        <div class="page-badge">
+                            <span class="badge-icon">🔧</span>
+                            <div>
+                                <strong>Customizable</strong>
+                                <small>Your brand, our tech</small>
+                            </div>
+                        </div>
+                        <div class="page-badge">
+                            <span class="badge-icon">📦</span>
+                            <div>
+                                <strong>MOQ Flexible</strong>
+                                <small>Scale with demand</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-hero-visual">
+                    <div class="hero-visual-frame">
+                        <img src="assets/images/resource/project5-1.jpg" alt="OEM Manufacturing Facility">
+                        <div class="hero-visual-overlay"></div>
+                        <div class="hero-visual-badge">
+                            <span class="badge-icon">✓</span>
+                            <div>
+                                <strong>CE & FCC Certified</strong>
+                                <small>Global compliance ready</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OEM Categories -->
+        <section class="section-block oem-categories-section" id="oem-categories">
+            <div class="container">
+                <div class="section-header center">
+                    <div>
+                        <p class="section-label">Product Categories</p>
+                        <h2 class="section-title">White-Label Hardware Lineup</h2>
+                        <p class="section-text">Custom-manufacture intelligent devices under your brand with our proven IoT stack.</p>
+                    </div>
+                </div>
+                <div class="oem-grid">
+                    <a href="oem-detail.html?category=retrofit" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project1-1.jpg" alt="Retrofit Home Automation">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-blue">Smart Home</span>
+                            <h3>Retrofit Home Automation</h3>
+                            <p>Plug-and-play controllers that upgrade legacy switches without rewiring.</p>
+                            <ul class="oem-features">
+                                <li>WiFi + Zigbee mesh</li>
+                                <li>Voice assistant ready</li>
+                                <li>Compact form factor</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="oem-detail.html?category=switches" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project2-1.jpg" alt="Touch Switches">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-green">Premium</span>
+                            <h3>Smart Touch Switches</h3>
+                            <p>Capacitive glass touch panels with RGB indicators and scene control.</p>
+                            <ul class="oem-features">
+                                <li>Tempered glass finish</li>
+                                <li>1–6 gang configurations</li>
+                                <li>Customizable LED colors</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="oem-detail.html?category=panels" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project3-1.jpg" alt="Touch Panels">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-purple">Control Hub</span>
+                            <h3>Smart Touch Panels</h3>
+                            <p>Central LCD/TFT displays with drag-and-drop automation designer.</p>
+                            <ul class="oem-features">
+                                <li>4.3"–10.1" screens</li>
+                                <li>Scene & timer engine</li>
+                                <li>Wall or tabletop mount</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="oem-detail.html?category=agriculture" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project4-1.jpg" alt="Agricultural Automation">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-green">AgriTech</span>
+                            <h3>Agricultural Automation</h3>
+                            <p>Sensor-driven controllers for greenhouse climate, fertigation, and livestock.</p>
+                            <ul class="oem-features">
+                                <li>IP65 weatherproof</li>
+                                <li>Multi-zone scheduling</li>
+                                <li>Solar + battery backup</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="oem-detail.html?category=irrigation" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project5-2.jpg" alt="Irrigation System">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-blue">Water Management</span>
+                            <h3>Water & Soil Irrigation</h3>
+                            <p>Precision drip/sprinkler valves with moisture and pH telemetry.</p>
+                            <ul class="oem-features">
+                                <li>Soil sensor integration</li>
+                                <li>Weather API sync</li>
+                                <li>Flow meter analytics</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="oem-detail.html?category=custom" class="oem-card">
+                        <div class="oem-image">
+                            <img src="assets/images/resource/project1-2.jpg" alt="Custom Devices">
+                            <div class="oem-overlay">
+                                <span class="oem-cta">View Details →</span>
+                            </div>
+                        </div>
+                        <div class="oem-content">
+                            <span class="pill pill-purple">Bespoke</span>
+                            <h3>Custom IoT Devices</h3>
+                            <p>Purpose-built hardware tailored to your vertical—industrial, medical, retail.</p>
+                            <ul class="oem-features">
+                                <li>Full PCB design</li>
+                                <li>Firmware engineering</li>
+                                <li>Certification support</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OEM Capabilities -->
+        <section class="section-block oem-capabilities-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div>
+                        <p class="section-label">Why Choose Us</p>
+                        <h2 class="section-title">End-to-End OEM Capabilities</h2>
+                        <p class="section-text">From prototyping to mass production, we handle every stage with precision.</p>
+                    </div>
+                </div>
+                <div class="capability-grid">
+                    <div class="capability-card">
+                        <div class="capability-icon">🎨</div>
+                        <h3>Brand Customization</h3>
+                        <p>Logo engraving, custom packaging, and branded firmware splash screens.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">🔬</div>
+                        <h3>R&D Support</h3>
+                        <p>Collaborative engineering for feature requests and hardware modifications.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">⚡</div>
+                        <h3>Fast Prototyping</h3>
+                        <p>Functional samples shipped within 15-21 days for validation.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">🏆</div>
+                        <h3>Quality Assurance</h3>
+                        <p>100% burn-in testing and ISO 9001:2015 certified production.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">🌍</div>
+                        <h3>Global Compliance</h3>
+                        <p>CE, FCC, RoHS certifications managed and included with shipments.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">📈</div>
+                        <h3>Scalable Production</h3>
+                        <p>Flexible MOQs from 100 units to 100K+ with consistent lead times.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OEM Process -->
+        <section class="section-block oem-process">
+            <div class="container">
+                <div class="section-header center">
+                    <div>
+                        <p class="section-label">Our Process</p>
+                        <h2 class="section-title">From Concept to Delivery</h2>
+                        <p class="section-text">A proven 6-phase partnership journey with clear milestones, deliverables, and timelines.</p>
+                    </div>
+                </div>
+                
+                <!-- Process Progress Bar -->
+                <div class="process-progress-container">
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <div class="progress-labels">
+                        <span class="progress-label">Start</span>
+                        <span class="progress-label">Mid-Stage</span>
+                        <span class="progress-label">Completion</span>
+                    </div>
+                </div>
+
+                <!-- Enhanced Timeline -->
+                <div class="process-timeline-enhanced">
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">01</div>
+                                <div class="step-icon">📞</div>
+                            </div>
+                            <h3>Discovery Call</h3>
+                            <p class="step-description">In-depth consultation to understand your vision, requirements, volume forecasts, and unique specifications.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ 1-2 weeks</span>
+                                <span class="meta-badge phase">Phase: Planning</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>Requirements document</li>
+                                    <li>Feature specification sheet</li>
+                                    <li>Initial timeline estimate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">02</div>
+                                <div class="step-icon">📋</div>
+                            </div>
+                            <h3>Quotation & NDA</h3>
+                            <p class="step-description">Confidentiality agreement signed, followed by detailed pricing breakdown including tooling, per-unit costs, and manufacturing timelines.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ 2-3 days</span>
+                                <span class="meta-badge phase">Phase: Agreement</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>NDA document</li>
+                                    <li>Detailed quotation</li>
+                                    <li>Pricing matrix for volume tiers</li>
+                                    <li>Lead time roadmap</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">03</div>
+                                <div class="step-icon">🎨</div>
+                            </div>
+                            <h3>Prototype Development</h3>
+                            <p class="step-description">Engineering sprint to develop functional prototypes with your branding, custom firmware, and full feature set for hands-on validation.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ 15-21 days</span>
+                                <span class="meta-badge phase">Phase: Development</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>3–5 functional samples</li>
+                                    <li>Branded packaging mockup</li>
+                                    <li>Custom firmware v1.0</li>
+                                    <li>Integration documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">04</div>
+                                <div class="step-icon">🏭</div>
+                            </div>
+                            <h3>Pilot Production</h3>
+                            <p class="step-description">Small controlled batch run (50–200 units) to validate manufacturing processes, supply chain, and product quality before full-scale production.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ 25-30 days</span>
+                                <span class="meta-badge phase">Phase: Validation</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>Pilot batch (50–200 units)</li>
+                                    <li>QC test reports</li>
+                                    <li>Manufacturing SOP</li>
+                                    <li>Supply chain audit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">05</div>
+                                <div class="step-icon">⚡</div>
+                            </div>
+                            <h3>Mass Production</h3>
+                            <p class="step-description">Full-scale manufacturing with automated QA checks, weekly shipment tracking, compliance certifications, and detailed production reports.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ 35-45 days</span>
+                                <span class="meta-badge phase">Phase: Scaling</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>Full production order</li>
+                                    <li>Weekly QC reports</li>
+                                    <li>Compliance documentation (CE/FCC)</li>
+                                    <li>Shipment schedules & tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step-enhanced">
+                        <div class="step-connector"></div>
+                        <div class="step-content">
+                            <div class="step-header">
+                                <div class="step-number-large">06</div>
+                                <div class="step-icon">🤝</div>
+                            </div>
+                            <h3>Ongoing Support</h3>
+                            <p class="step-description">Long-term partnership with firmware updates, spare parts management, technical support, and continuous product improvements.</p>
+                            <div class="step-meta">
+                                <span class="meta-badge duration">⏱ Ongoing</span>
+                                <span class="meta-badge phase">Phase: Partnership</span>
+                            </div>
+                            <div class="step-deliverables">
+                                <strong>Deliverables:</strong>
+                                <ul>
+                                    <li>OTA firmware updates</li>
+                                    <li>Spare parts inventory</li>
+                                    <li>Technical documentation</li>
+                                    <li>24/7 support channel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Summary -->
+                <div class="timeline-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">📅</div>
+                        <h4>Total Timeline</h4>
+                        <p class="summary-value">8-12 Weeks</p>
+                        <p class="summary-text">From initial call to first shipment</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">✓</div>
+                        <h4>Checkpoints</h4>
+                        <p class="summary-value">6 Major</p>
+                        <p class="summary-text">Clear milestones with go/no-go decisions</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">👥</div>
+                        <h4>Your Touchpoints</h4>
+                        <p class="summary-value">Weekly</p>
+                        <p class="summary-text">Regular updates and progress calls</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🎯</div>
+                        <h4>Quality Gate</h4>
+                        <p class="summary-value">100%</p>
+                        <p class="summary-text">Each unit tested before shipment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download OEM Plan -->
+        <section class="section-block oem-download-section" id="oem-download">
+            <div class="container">
+                <div class="download-card">
+                    <div class="download-content">
+                        <p class="section-label">Get Started</p>
+                        <h2 class="section-title">Download OEM Partnership Plan</h2>
+                        <p class="section-text">Comprehensive 12-page guide covering pricing tiers, MOQs, lead times, customization options, and case studies.</p>
+                        <ul class="download-features">
+                            <li><strong>Product Catalog:</strong> Full specs for all OEM categories</li>
+                            <li><strong>Pricing Matrix:</strong> Volume discounts and tooling costs</li>
+                            <li><strong>Case Studies:</strong> Success stories from partners</li>
+                            <li><strong>Compliance Guide:</strong> Certification process and timelines</li>
+                        </ul>
+                        <div class="download-actions">
+                            <a href="assets/downloads/OEM-Partnership-Plan.pdf" class="btn btn-primary" download><span class="btn-icon">📥</span>Download PDF (2.4 MB)</a>
+                            <a href="Contact.html" class="btn btn-secondary"><span class="btn-icon">📞</span>Schedule Consultation</a>
+                        </div>
+                    </div>
+                    <div class="download-visual">
+                        <img src="assets/images/resource/banner2.jpg" alt="OEM Documentation">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+   <!-- <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+    <div class="footer-logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+</div>
+
+                <p>Leading provider of smart home automation and IoT solutions. We transform spaces into intelligent environments that enhance comfort, security, and energy efficiency.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Service.html">Services</a></li>
+                    <li><a href="Oem-facility.html">OEM Facility</a></li>
+                    <li><a href="enquiry.html">Make Enquiry</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i>📍</i>Dharti Automation, Maurya Lok, Block-A, 5th Floor, Budh Vihar, Dak Bangla Chouraha, Patna-800001</li>
+                    <li><i>📞</i> +91 7070868686</li>
+                    <li><i>✉️</i> info@dhartiautomation.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dharti IoT. All rights reserved.</p>
+        </div>
+    </footer>-->
+    
+
+<div class="video-footer-wrapper" style="position:relative;width:100%;height:65vh;overflow:hidden;">
+
+    <video autoplay muted loop
+        style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/video/company.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY CONTENT -->
+    <div class="video-footer-overlay"
+         style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            padding:40px 60px;
+            box-sizing:border-box;
+            color:white;
+            z-index:2;
+         ">
+
+        <!-- LEFT SIDE -->
+<div class="footer-left dropdown">
+    <h4 class="dropdown-btn">Quick Links ▾</h4>
+
+    <ul class="dropdown-content">
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Product.html">Products</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Oem-facility.html">OEM Facility</a></li>
+        <li><a href="enquiry.html">Make Enquiry</a></li>
+    </ul>
+</div>
+
+
+
+        <!-- RIGHT SIDE -->
+        <div class="footer-right dropdown">
+    <h4 class="dropdown-btn">Contact Us ▾</h4>
+
+    <div class="dropdown-content contact-content">
+        <p>
+            📍 Dharti Automation, Maurya Lok,<br>
+            Block-A, 5th Floor, Budh Vihar,<br>
+            Dak Bangla Chouraha, Patna – 800001
+        </p>
+        <p>📞 +91 7070868686</p>
+        <p>✉️ info@dhartiautomation.com</p>
+
+        <div class="social-links">
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">📷</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

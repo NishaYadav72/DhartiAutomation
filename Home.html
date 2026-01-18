@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Smart Home Automation & IoT Solutions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+
+    <style>
+        /* Automation Dropdown */
+.automation-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Button text */
+.automation-btn {
+    font-weight: 600;
+}
+
+/* Dropdown hidden */
+.automation-menu {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-radius: 8px;
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    width: 160px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+/* Dropdown items */
+.automation-menu li {
+    padding: 8px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.automation-menu li:hover {
+    background: #f0f4ff;
+    color: #2563eb;
+}
+
+/* SHOW dropdown on hover */
+.automation-dropdown:hover .automation-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div id="particles-page"></div>
+    <header>
+        <div class="header-container">
+            <a href="Home.html" class="logo">
+    <div class="logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+            
+            <nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Product.html" class="nav-link dropdown-toggle">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Product.html" class="nav-link">All Products</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
+                            <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="Service.html" class="nav-link dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Service.html" class="nav-link">All Services</a></li>
+                            <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
+                            <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
+                            <li><a href="consunting.html" class="nav-link">Consulting</a></li>
+                            <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
+                    <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
+        <div class="neon-lines">
+            <div class="neon-line"></div>
+            <div class="neon-line"></div>
+            <div class="neon-line"></div>
+        </div>
+        <div class="floating-elements">
+            <div class="float-icon icon-1" data-speed="2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+            </div>
+            <div class="float-icon icon-2" data-speed="3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </div>
+            <div class="float-icon icon-3" data-speed="2.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+            </div>
+            <div class="float-icon icon-4" data-speed="3.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+            </div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-title">Smart Living, Simplified</h1>
+                <h2 class="hero-subtitle">Transform Your Space with Intelligent IoT Solutions</h2>
+                <p class="hero-text">Experience the future of home automation with our cutting-edge IoT technology. Control, monitor, and optimize your environment seamlessly from anywhere.</p>
+                <div class="hero-buttons">
+                    <a href="Contact.html" class="btn btn-primary"><span class="btn-icon">📞</span>Contact Us</a>
+                    <a href="About.html" class="btn btn-secondary"><span class="btn-icon">📘</span>Know More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">🏗️</span>
+                        <span class="stat-label">Deployments</span>
+                        <strong>250+</strong>
+                        <small>Sites live in 30 days</small>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🛡️</span>
+                        <span class="stat-label">Security</span>
+                        <strong>24/7</strong>
+                        <small>Managed SOC + alerts</small>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🌿</span>
+                        <span class="stat-label">Sustainability</span>
+                        <strong>18%</strong>
+                        <small>Avg. energy savings</small>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-media animate-on-scroll animate-right">
+                <div class="hero-media-frame">
+                    <img src="assets/images/resource/about5-1.jpg" alt="Smart home control dashboard on tablet">
+                    <div class="hero-media-badges">
+                        <span class="hero-chip"><img src="assets/images/icons/theme-icon8.png" alt="Live data">Live dashboards</span>
+                        <span class="hero-chip"><img src="assets/images/icons/theme-icon1.png" alt="Security">Adaptive security</span>
+                        <span class="hero-chip"><img src="assets/images/icons/theme-icon4.png" alt="Energy">Energy orchestration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main>
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="about-photo animate-on-scroll animate-up">
+                            <img src="assets/images/resource/about3-2.jpg" alt="Team installing smart devices">
+                            <div class="experience-float animate-on-scroll animate-up">
+                                <div class="experience-badge">
+                                    <div class="experience-number">10+</div>
+                                    <div class="experience-text">Years of<br>Excellence</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visual-background">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring pulse-ring-delay"></div>
+                        </div>
+                        <div class="about-graphics animate-on-scroll animate-right">
+                            <div class="graphic-item automation-dropdown">
+    <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+    </div>
+
+    <span class="automation-btn">Automation ▾</span>
+
+    <!-- Dropdown -->
+    <ul class="automation-menu">
+        <li>Home</li>
+        <li>Hotel</li>
+        <li>Hospital</li>
+        <li>Agriculture</li>
+        <li>Industry</li>
+    </ul>
+</div>
+
+                            <div class="graphic-item">
+                                <div class="icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                </div>
+                                <span>IoT Devices</span>
+                            </div>
+                            <div class="graphic-item">
+                                <div class="icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <line x1="12" y1="2" x2="12" y2="9"></line>
+                                        <line x1="12" y1="15" x2="12" y2="22"></line>
+                                    </svg>
+                                </div>
+                                <span>Embedded</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content animate-on-scroll animate-left">
+                        <h3 class="section-label">🔍 About Dharti Automation</h3>
+                        <h2 class="section-title">Leading the Future of Home Automation</h2>
+                        <p class="section-text">With over a decade of expertise in IoT and smart home, Hotel, Hospital, Agriculture, industries Dharti Automation has been at the forefront of transforming ordinary spaces into intelligent, connected environments.</p>
+                        <p class="section-text">We specialize in designing, developing, and deploying innovative Dharti Automation solutions that enhance comfort, security, and energy efficiency. Our commitment to excellence and customer satisfaction has made us a trusted partner for thousands of homes and businesses.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">🧭</div>
+                                <div class="feature-text">
+                                    <strong>Industry Expertise</strong>
+                                    <span>10+ years in IoT innovation</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎖️</div>
+                                <div class="feature-text">
+                                    <strong>Certified Solutions</strong>
+                                    <span>ISO certified & quality assured</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🤝</div>
+                                <div class="feature-text">
+                                    <strong>24/7 Support</strong>
+                                    <span>Dedicated customer care</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-callouts">
+                            <div class="callout-chip">ISO 27001 ready</div>
+                            <div class="callout-chip">Edge + Cloud redundancy</div>
+                        </div>
+                        
+<a href="About.html" class="btn btn-primary mt-2" style="margin-left:-115px;">
+  Discover More
+</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Products Section -->
+<section class="section-block product-section" id="products">
+    <div class="container">
+        <div class="section-header animate-on-scroll animate-left">
+            <div>
+                <p class="section-label">Products</p>
+                <h2 class="section-title">Smart Devices Built for Modern Living</h2>
+                <p class="section-text">
+                    Explore our flagship IoT products engineered for security, comfort, and energy efficiency.
+                </p>
+            </div>
+
+            <a href="Product.html" class="btn btn-secondary" style="margin-top:13px;">
+                View All Products
+            </a>
+        </div>
+
+        <div class="card-grid three-col animate-on-scroll animate-up testimonial-scroll">
+
+            <!-- FIRST CARD -->
+            <div class="neo-card" style="position:relative; display:flex; flex-direction:column; justify-content:space-between; min-height:520px;">
+                <div>
+                    <div class="card-thumb">
+                        <img src="assets/images/resource/abc.png" alt="Energy hub">
+                    </div>
+                    <div class="card-top">
+                        <span class="pill pill-green">Energy</span>
+                        <span class="chip">New</span>
+                    </div>
+                    <h3>Empower Farms:Smart Nutrients & Drip Irrigation</h3>
+                    <p>Dharti Automation’s Smart Nutrition Controller for Plant uses IoT and precision sensors to monitor temperature, humidity, and soil nutrition in real time.</p>
+                    <div class="card-tags" style="margin-top:10px;">
+                        <span class="tag-chip">Live Analytics</span>
+                        <span class="tag-chip">Edge AI</span>
+                        <span class="tag-chip">Grid Ready</span>
+                    </div>
+                </div>
+                <!-- Footer Section -->
+                <div class="card-footer" style="margin-top:15px; display:flex; flex-direction:column; gap:10px;">
+                    <div style="text-align:center;">
+                        <a href="agriculture.html" class="btn-link" style="font-weight:bold; text-decoration:none; background:#f0f4ff; color:black; padding:8px 20px; border-radius:25px;">Learn More</a>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+<a href="https://www.linkedin.com/posts/robin-choudhary-a7365a180_agritech-smartnutrition-iot-activity-7396972066576490497--SHL?utm_source=social_share_video_v2&utm_medium=android_app&rcm=ACoAACrPpncB7oiMCY3z9mCsRoHs7vCvWmqS9_8&utm_campaign=share_via" 
+   class="btn-link" 
+   style="text-decoration:none; background:#f0f4ff; color:black; padding:6px 15px; border-radius:20px;" 
+   target="_blank">
+   View Demo
+</a>
+                        <a href="Contact.html" class="btn-link" style="text-decoration:none; background:#f0f4ff; color:black; padding:6px 15px; border-radius:20px;">Get Pricing</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND CARD -->
+            <div class="neo-card" style="transform: translateY(-18px) scale(1.05); background: linear-gradient(180deg, #f4f7ff, #ffffff); border: 2px solid #4f6ef7; box-shadow: 0 22px 50px rgba(79,110,247,0.35); position:relative; display:flex; flex-direction:column; justify-content:space-between; min-height:520px;">
+                <!-- Featured Badge -->
+                <div style="position:absolute; top:14px; right:14px; background:#4f6ef7; color:#fff; padding:4px 12px; font-size:12px; border-radius:20px; font-weight:600; z-index:2;">⭐ Featured</div>
+
+                <div>
+                    <div class="card-thumb">
+                        <img src="assets/images/resource/Home-hotel-Hospital1.png" alt="Security suite">
+                    </div>
+                    <div class="card-top">
+                        <span class="pill pill-blue">Security</span>
+                        <span class="chip">Pro</span>
+                    </div>
+                    <h3>Tierra IOT Automation-Products & Solutions for Home, Hotel, Hospital & Industries</h3>
+                    <p>“Smart retrofit solutions for homes, hotels, hospitals, and industries—making automation simple, scalable, and future-ready.”</p>
+                    <div class="card-tags" style="margin-top:10px;">
+                        <span class="tag-chip">Zero-Trust</span>
+                        <span class="tag-chip">24/7 Alerts</span>
+                        <span class="tag-chip">Cloud + Local</span>
+                    </div>
+                </div>
+                <div class="card-footer" style="margin-top:15px; display:flex; flex-direction:column; gap:10px;">
+                    <div style="text-align:center;">
+                        <a href="home-hotel-detail.html" class="btn-link" style="font-weight:bold; text-decoration:none; background:#f0f4ff; color:black; padding:8px 20px; border-radius:25px;">Learn More</a>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+<a href="https://www.linkedin.com/posts/robin-choudhary-a7365a180_unitemicrosystems-iic-innovation-activity-7403142218842083328-QMLO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE7CAnEBqNrBrUaG6B3wTCOOJTuW_XVRgEc" 
+   target="_blank" 
+   style="text-decoration:none; background:#f0f4ff; color:black; padding:6px 15px; border-radius:20px; display:inline-block; font-weight:600; text-align:center;">
+   View Demo
+</a>
+
+
+                        <a href="Contact.html" class="btn-link" style="text-decoration:none; background:#f0f4ff; color:black; padding:6px 15px; border-radius:20px;">Book a Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THIRD CARD -->
+<!-- THIRD CARD -->
+<div class="neo-card" style="position:relative; display:flex; flex-direction:column; justify-content:space-between; min-height:520px;">
+    <div>
+        <div class="card-thumb">
+            <img src="assets/images/resource/shakhi.png" alt="Climate system">
+        </div>
+        <div class="card-top">
+            <span class="pill pill-purple">Comfort</span>
+            <span class="chip">v2.1</span>
+        </div>
+        <h3>Sakhicare Version 1: Instant, Reliable Care</h3>
+        <p>Sakhicare Version 1 by Dharti Automation: Effortless sanitary pad vending with AC/DC power and pink/white/purple colors. Instant hygiene, one click away. Empower women daily – "A CLICK IS ENOUGH"</p>
+        <div class="card-tags" style="margin-top:10px;">
+            <span class="tag-chip">Cost Effective</span>
+            <span class="tag-chip">Low Maintenance</span>
+            <span class="tag-chip">Women Hygiene Focused</span>
+        </div>
+    </div>
+    <div class="card-footer" style="margin-top:15px; display:flex; justify-content:space-between; gap:10px;">
+        <a href="shakhi_details.html" class="btn-link" style="font-weight:bold; text-decoration:none; background:#f0f4ff; color:black; padding:8px 20px; border-radius:25px;">Learn More</a>
+        <a href="Contact.html" class="btn-link" style="text-decoration:none; background:#f0f4ff; color:black; padding:6px 15px; border-radius:20px;">Talk to Sales</a>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+        <!-- Services Section -->
+        <section class="section-block service-section" id="services">
+            <div class="container">
+                <div class="section-header animate-on-scroll animate-left">
+                    <div>
+                        <p class="section-label">Services</p>
+                        <h2 class="section-title">End-to-End IoT Services</h2>
+                        <p class="section-text">From design to deployment, we handle every layer of your smart environment.</p>
+                    </div>
+                    <a href="Service.html" class="btn btn-secondary" style="margin-top:13px ;">View All Services</a>
+                </div>
+                <div class="service-grid">
+                    <div class="service-highlight animate-on-scroll animate-right">
+                        <div class="service-visual">
+                            <img src="assets/images/resource/service2-3.jpg" alt="Engineers deploying IoT">
+                        </div>
+                        <div class="badge">Full Stack</div>
+                        <h3>Blueprint to Live in 30 Days</h3>
+                        <p>Strategy, deployment, automation recipes, and runbooks delivered as one package.</p>
+                        <div class="service-metrics">
+                            <div class="metric">
+                                <strong>250+</strong>
+                                <span>Sites deployed</span>
+                            </div>
+                            <div class="metric">
+                                <strong>18%</strong>
+                                <span>Avg. energy savings</span>
+                            </div>
+                            <div class="metric">
+                                <strong>24/7</strong>
+                                <span>Remote SOC</span>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary" href="Contact.html">Plan a rollout</a>
+                    </div>
+                    <div class="card-grid four-col animate-on-scroll animate-up">
+                        <div class="glass-card accent">
+                            <div class="icon-circle">⚡</div>
+                            <h3>Rapid Deployment</h3>
+                            <p>Fast-track installation with certified engineers and zero downtime.</p>
+                            <div class="tag-row">
+                                <span class="tag-chip">SLA-backed</span>
+                                <span class="tag-chip">Multi-site</span>
+                            </div>
+                            <a class="link" href="Service-detail.html">See details</a>
+                        </div>
+                        <div class="glass-card accent">
+                            <div class="icon-circle">🛡️</div>
+                            <h3>Managed Security</h3>
+                            <p>Continuous monitoring, threat response, and firmware hardening.</p>
+                            <div class="tag-row">
+                                <span class="tag-chip">Zero Trust</span>
+                                <span class="tag-chip">SOC</span>
+                            </div>
+                            <a class="link" href="Service-detail.html">See details</a>
+                        </div>
+                        <div class="glass-card accent">
+                            <div class="icon-circle">🧠</div>
+                            <h3>IoT Consulting</h3>
+                            <p>Architecture reviews, RF planning, and interoperability roadmaps.</p>
+                            <div class="tag-row">
+                                <span class="tag-chip">RF Design</span>
+                                <span class="tag-chip">Edge AI</span>
+                            </div>
+                            <a class="link" href="Service-detail.html">See details</a>
+                        </div>
+                        <div class="glass-card accent">
+                            <div class="icon-circle">🔧</div>
+                            <h3>Lifecycle Care</h3>
+                            <p>Proactive maintenance, updates, and 24/7 remote support.</p>
+                            <div class="tag-row">
+                                <span class="tag-chip">Remote Ops</span>
+                                <span class="tag-chip">Upgrades</span>
+                            </div>
+                            <a class="link" href="Service-detail.html">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-block cta-section">
+            <div class="container">
+                <div class="cta-grid animate-on-scroll animate-zoom">
+                    <div class="cta-text">
+                        <p class="section-label">🚀 Ready to Modernize</p>
+                        <h2 class="section-title">Launch Your Smart Environment in Weeks</h2>
+                        <p class="section-text">Get a tailored plan for energy, security, and automation with clear milestones and budgets.</p>
+                        <div class="cta-highlights">
+                            <span class="cta-chip"><img src="assets/images/icons/theme-icon1.png" alt="Shield icon">Security first</span>
+                            <span class="cta-chip"><img src="assets/images/icons/theme-icon4.png" alt="Energy icon">Energy ROI</span>
+                            <span class="cta-chip"><img src="assets/images/icons/theme-icon7.png" alt="Automation icon">Automation playbooks</span>
+                        </div>
+                        <div class="cta-quick-facts">
+                            <div class="cta-fact">
+                                <img src="assets/images/icons/theme-icon10.png" alt="Sites">
+                                <div>
+                                    <strong>250+ Sites</strong>
+                                    <span>Blueprint to live in 30 days</span>
+                                </div>
+                            </div>
+                            <div class="cta-fact">
+                                <img src="assets/images/icons/theme-icon9.png" alt="Savings">
+                                <div>
+                                    <strong>18% Savings</strong>
+                                    <span>Avg. energy efficiency gain</span>
+                                </div>
+                            </div>
+                            <div class="cta-fact">
+                                <img src="assets/images/icons/theme-icon12.png" alt="Support">
+                                <div>
+                                    <strong>24/7 SOC</strong>
+                                    <span>Managed security + uptime</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta-actions">
+                            <a class="btn btn-primary" href="enquiry.html"><span class="btn-icon">📝</span>Start an Enquiry</a>
+                            <a class="btn btn-secondary" href="Contact.html"><span class="btn-icon">💬</span>Talk to an Expert</a>
+                        </div>
+                        <div class="cta-trust">
+                            <div class="trust-item">
+                                <span class="dot">⏱️</span>
+                                <div>
+                                    <strong>Response in 30 mins</strong>
+                                    <small>Weekdays 9am–9pm IST</small>
+                                </div>
+                            </div>
+                            <div class="trust-item">
+                                <span class="dot">🚚</span>
+                                <div>
+                                    <strong>On-site in 72 hrs</strong>
+                                    <small>Priority metro support</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-media">
+                        <div class="cta-media-frame">
+                            <img class="cta-image" src="assets/images/resource/process1-1.jpg" alt="Smart home control dashboard">
+                            <div class="cta-media-badge">
+                                <img src="assets/images/icons/theme-icon8.png" alt="Live data icon">
+                                <div>
+                                    <strong>Live Dashboards</strong>
+                                    <span>Energy, security, and comfort KPIs</span>
+                                </div>
+                            </div>
+                            <div class="cta-overlay-card">
+                                <div class="overlay-title">Implementation Sprint</div>
+                                <p>Design, deploy, validate, and handover in 4 weeks with a single owner.</p>
+                                <div class="overlay-tags">
+                                    <span>Playbooks</span>
+                                    <span>QA Sign-off</span>
+                                    <span>Runbooks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="section-block clients-section" id="clients">
+            <div class="container">
+                <div class="section-header center animate-on-scroll animate-fade">
+                    <div>
+                        <p class="section-label">Clients</p>
+                        <h2 class="section-title">Trusted by Leading Brands</h2>
+                        <p class="section-text">Enterprises, builders, and smart communities across the region rely on Dharti Automation.</p>
+                    </div>
+                </div>
+                <div class="logo-grid animate-on-scroll animate-up">
+                    <div class="logo-pill"><img src="assets/images/resource/client1-1.png" alt="TechSphere logo">TechSphere</div>
+                    <div class="logo-pill"><img src="assets/images/resource/client1-2.png" alt="GreenGrid logo">GreenGrid</div>
+                    <div class="logo-pill"><img src="assets/images/resource/client1-3.png" alt="HomeZen logo">HomeZen</div>
+                    <div class="logo-pill"><img src="assets/images/resource/client1-4.png" alt="SecureLink logo">SecureLink</div>
+                    <div class="logo-pill"><img src="assets/images/resource/client1-5.png" alt="BrightLiving logo">BrightLiving</div>
+                    <div class="logo-pill"><img src="assets/images/resource/customer1.png" alt="Skyline Estates logo">Skyline Estates</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-block testimonial-section" id="testimonials">
+            <div class="container">
+                <div class="section-header center animate-on-scroll animate-left">
+                    <div>
+                        <p class="section-label">Testimonials</p>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                        <p class="section-text">Real feedback from customers who modernized their spaces with Dharti Automation.</p>
+                    </div>
+                </div>
+                <div class="testimonial-slider swiper animate-on-scroll animate-up">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>Deployment was seamless and the energy insights cut our utility costs by 18% in 60 days.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">AK</div>
+                                <div>
+                                    <strong>Anita Kapoor</strong>
+                                    <span>Facility Director, Skyline Estates</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>The security stack is rock solid—alerts are instant and integrations with our SOC were easy.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">RS</div>
+                                <div>
+                                    <strong>Rohan Shah</strong>
+                                    <span>Head of Security, GreenGrid</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>Deployment was seamless and the energy insights cut our utility costs by 18% in 60 days.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">AK</div>
+                                <div>
+                                    <strong>Anita Kapoor</strong>
+                                    <span>Facility Director, Skyline Estates</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>The security stack is rock solid—alerts are instant and integrations with our SOC were easy.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">RS</div>
+                                <div>
+                                    <strong>Rohan Shah</strong>
+                                    <span>Head of Security, GreenGrid</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>Deployment was seamless and the energy insights cut our utility costs by 18% in 60 days.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">AK</div>
+                                <div>
+                                    <strong>Anita Kapoor</strong>
+                                    <span>Facility Director, Skyline Estates</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>The security stack is rock solid—alerts are instant and integrations with our SOC were easy.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">RS</div>
+                                <div>
+                                    <strong>Rohan Shah</strong>
+                                    <span>Head of Security, GreenGrid</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card swiper-slide">
+                            <div class="quote-mark">“</div>
+                            <p>Our smart homes now ship with Dharti IoT by default—customers love the reliability and UX.</p>
+                            <div class="testimonial-meta">
+                                <div class="avatar">DV</div>
+                                <div>
+                                    <strong>Devika Verma</strong>
+                                    <span>Product Lead, HomeZen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="testimonial-nav testimonial-prev" aria-label="Previous testimonial">‹</button>
+                        <div class="testimonial-dots swiper-pagination"></div>
+                        <button class="testimonial-nav testimonial-next" aria-label="Next testimonial">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+<section class="section-block portfolio-section" id="portfolio">
+    <div class="container">
+        <div class="section-header animate-on-scroll animate-left">
+            <div>
+                <p class="section-label">Portfolio</p>
+                <h2 class="section-title">Recent Deployments</h2>
+                <p class="section-text">A snapshot of spaces elevated with Dharti Automation technology.</p>
+            </div>
+            <a href="Contact.html" class="btn btn-secondary" style="margin-top:10px;">Start a Project</a>
+        </div>
+
+        <div class="card-grid three-col animate-on-scroll animate-up" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+
+            <!-- CARD 1 -->
+            <div class="portfolio-card" style="
+                border-radius:16px;
+                overflow:hidden;
+                background:#ffffff;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+                transition: transform 0.3s, box-shadow 0.3s;
+                flex:1;
+                min-width:280px;
+            "
+            onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)';"
+            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.15)';">
+                <div class="portfolio-image" style="overflow:hidden;">
+                    <img src="assets/images/resource/AgriBanner.png" alt="Skyline Smart Towers" style="width:100%; height:100%; border-radius:16px 16px 0 0;">
+                </div>
+                <div class="portfolio-body" style="padding:16px;">
+                    <span class="pill pill-blue">Agriculture</span>
+                    <h3>Smart Nutrition Controller for Agriculture</h3>
+                    <p>IoT-based smart device for real-time crop monitoring and automated nutrient management, empowering sustainable farming.</p>
+                    <div class="card-actions">
+                        <a class="link" href="#">View case study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="portfolio-card" style="
+                border-radius:16px;
+                overflow:hidden;
+                background:#ffffff;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+                transition: transform 0.3s, box-shadow 0.3s;
+                flex:1;
+                min-width:280px;
+            "
+            onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)';"
+            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.15)';">
+                <div class="portfolio-image" style="overflow:hidden;">
+                    <img src="assets/images/resource/Home-hotel-Hospital .png" alt="TechSphere Campus" style="width:100%; height:100%; border-radius:16px 16px 0 0;">
+                </div>
+                <div class="portfolio-body" style="padding:16px;">
+                    <span class="pill pill-green">Enterprise</span>
+                    <h3>Tierra IOT Automation – Home, Hotel, Hospital & Industrial Solutions</h3>
+                    <p>Smart IoT solutions for homes, hotels, hospitals, and industries—scalable, reliable, and easy-to-use automation.</p>
+                    <div class="card-actions">
+                        <a class="link" href="#">View case study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="portfolio-card" style="
+                border-radius:16px;
+                overflow:hidden;
+                background:#ffffff;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+                transition: transform 0.3s, box-shadow 0.3s;
+                flex:1;
+                min-width:280px;
+            "
+            onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)';"
+            onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.15)';">
+                <div class="portfolio-image" style="overflow:hidden;">
+                    <img src="assets/images/resource/shakhi.png" alt="BrightLiving Villas" style="width:100%; height:auto; border-radius:16px 16px 0 0;">
+                </div>
+                <div class="portfolio-body" style="padding:16px;">
+                    <span class="pill pill-purple">Women Empowerment</span>
+                    <h3>Sakhicare Version 1 – Instant, Reliable Care</h3>
+                    <p>Effortless sanitary pad vending by Dharti Automation. Instant hygiene with AC/DC power and multiple colors—empowering women daily, just one click away.</p>
+                    <div class="card-actions">
+                        <a class="link" href="#">View case study</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section class="section-block contact-section" id="contact">
+            <div class="container contact-grid animate-on-scroll animate-left">
+                <div class="contact-copy">
+                        <p class="section-label">📞 Contact</p>
+                    <h2 class="section-title">Let’s Talk About Your Next Smart Space</h2>
+                    <p class="section-text">Reach our consultants for quick estimates, solution walkthroughs, or a tailored roadmap for your site.</p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="Contact.html">Contact Us</a>
+                        <a class="btn btn-secondary" href="enquiry.html">Start an Enquiry</a>
+                    </div>
+                    <div class="contact-cards">
+                       
+                        
+                    </div>
+                </div>
+                <div class="contact-media">
+                    <div class="contact-media-frame">
+                        <img src="assets/images/background/contact-bg-2.jpg" alt="Support team discussing smart solutions">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry Section -->
+        <section class="section-block enquiry-section" id="enquiry">
+            <div class="container enquiry-grid animate-on-scroll animate-right">
+                <div>
+                    <p class="section-label">🗂️ Enquiry</p>
+                    <h2 class="section-title">Tell Us About Your Project</h2>
+                    <p class="section-text">Share your goals and we’ll design an IoT solution with clear scope, timelines, and ROI.</p>
+                    <div class="enquiry-highlights">
+                        <span class="tag-chip">Custom Design</span>
+                        <span class="tag-chip">Certified Engineers</span>
+                        <span class="tag-chip">Support SLAs</span>
+                    </div>
+                    <div class="enquiry-steps">
+                        <div class="step active">
+                            <span>01 • 🔎</span>
+                            <strong>Discovery</strong>
+                            <small>15-min needs capture</small>
+                        </div>
+                        <div class="step">
+                            <span>02 • 🗺️</span>
+                            <strong>Solution Plan</strong>
+                            <small>Scope, BOM, timeline</small>
+                        </div>
+                        <div class="step">
+                            <span>03 • 🛠️</span>
+                            <strong>Deploy</strong>
+                            <small>On-site & remote QA</small>
+                        </div>
+                    </div>
+                    <div class="enquiry-visual animate-on-scroll animate-up">
+                        <img src="assets/images/background/contact-bg-4.jpg" alt="Team collaborating on IoT rollout">
+                    </div>
+                </div>
+                <form id="enquiryForm" class="enquiry-form">
+    <div class="form-row">
+        <div class="form-field">
+            <label for="enq-name">Name</label>
+            <input type="text" id="enq-name" name="name" required>
+        </div>
+        <div class="form-field">
+            <label for="enq-email">Email</label>
+            <input type="email" id="enq-email" name="email" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-field">
+            <label for="enq-phone">Phone</label>
+            <input type="tel" id="enq-phone" name="phone">
+        </div>
+        <div class="form-field">
+            <label for="enq-company">Company</label>
+            <input type="text" id="enq-company" name="company">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-field">
+            <label for="enq-service">Service Interest</label>
+            <select id="enq-service" name="service">
+                <option>Home</option>
+                <option>Hotel</option>
+                <option>Hospital</option>
+                <option>Agriculture</option>
+                <option>OEM / Custom</option>
+                <option>Industries</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="enq-timeline">Timeline</label>
+            <select id="enq-timeline" name="timeline">
+                <option>ASAP</option>
+                <option>1-3 months</option>
+                <option>3-6 months</option>
+                <option>6+ months</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-field">
+        <label for="enq-notes">Project Details</label>
+        <textarea id="enq-notes" name="details" rows="4" required></textarea>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+        <a class="btn btn-secondary" href="Contact.html">Call Our Team</a>
+    </div>
+    <div class="status-msg" id="enquiryStatus"></div>
+</form>
+
+<!-- EmailJS Integration Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function(){
+        emailjs.init("ZXMQlVbl_YZB8pKwt"); // 👈 Tumhara Public Key
+    })();
+
+    // Handle enquiry form submit
+    document.getElementById("enquiryForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const status = document.getElementById("enquiryStatus");
+        status.style.color = "black";
+        status.innerHTML = "Sending enquiry...";
+
+        emailjs.sendForm(
+            "service_2ou4g5w",     // 👈 Tumhara Service ID
+            "template_j4n9cug",    // 👈 Tumhara Template ID
+            this
+        )
+        .then(() => {
+            status.style.color = "green";
+            status.innerHTML = "Enquiry sent successfully!";
+            this.reset();
+        })
+        .catch((err) => {
+            status.style.color = "red";
+            status.innerHTML = "Failed to send enquiry!";
+            console.error("EmailJS Error:", err);
+        });
+    });
+</script>
+
+            </div>
+        </section>
+    </main>
+    
+   <!-- <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+    <div class="footer-logo-icon">
+        <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+    </div>
+</div>
+
+                <p>Leading provider of smart home automation and IoT solutions. We transform spaces into intelligent environments that enhance comfort, security, and energy efficiency.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Service.html">Services</a></li>
+                    <li><a href="Oem-facility.html">OEM Facility</a></li>
+                    <li><a href="enquiry.html">Make Enquiry</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i>📍</i>Dharti Automation, Maurya Lok, Block-A, 5th Floor, Budh Vihar, Dak Bangla Chouraha, Patna-800001</li>
+                    <li><i>📞</i> +91 7070868686</li>
+                    <li><i>✉️</i>info@dhartiautomation.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dharti IoT. All rights reserved.</p>
+        </div>
+    </footer>-->
+    
+
+    <div class="video-footer-wrapper" style="position:relative;width:100%;height:65vh;overflow:hidden;">
+
+    <video autoplay muted loop
+        style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/video/company.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY CONTENT -->
+    <div class="video-footer-overlay"
+         style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            padding:40px 60px;
+            box-sizing:border-box;
+            color:white;
+            z-index:2;
+         ">
+
+        <!-- LEFT SIDE -->
+<div class="footer-left dropdown">
+    <h4 class="dropdown-btn">Quick Links ▾</h4>
+
+    <ul class="dropdown-content">
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Product.html">Products</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Oem-facility.html">OEM Facility</a></li>
+        <li><a href="enquiry.html">Make Enquiry</a></li>
+    </ul>
+</div>
+
+
+
+        <!-- RIGHT SIDE -->
+        <div class="footer-right dropdown">
+    <h4 class="dropdown-btn">Contact Us ▾</h4>
+
+    <div class="dropdown-content contact-content">
+        <p>
+            📍 Dharti Automation, Maurya Lok,<br>
+            Block-A, 5th Floor, Budh Vihar,<br>
+            Dak Bangla Chouraha, Patna – 800001
+        </p>
+        <p>📞 +91 7070868686</p>
+        <p>✉️ info@dhartiautomation.com</p>
+
+        <div class="social-links">
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">📷</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
