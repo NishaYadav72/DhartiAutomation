@@ -6933,3 +6933,21 @@ button:hover,
         overflow-x: hidden;
     }
 }
+
+
+@media (max-width: 768px) {
+
+  .hero-stats{
+    display: flex;
+    flex-direction: column;   /* sab uper-niche */
+    gap: 16px;
+  }
+
+  .hero-stats .stat-card{
+    width: 100%;              /* last card jaisi full width */
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+}
