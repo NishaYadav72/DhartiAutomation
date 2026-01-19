@@ -6953,15 +6953,22 @@ button:hover,
 }
 
 
-.contact-info-cards .info-card {
-  margin-bottom: 20px;
+
+
+
+/* ===== Desktop (as it is) ===== */
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .map-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin-left: auto;
+  flex: 1;
+}
+
+.contact-info-cards {
+  flex: 1;
 }
 
 .map-image {
@@ -6970,118 +6977,30 @@ button:hover,
   border-radius: 15px;
 }
 
-.map-marker {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: red;
-  border-radius: 50%;
-  cursor: pointer;
-  animation: pulse 1.8s infinite;
-}
-
-.map-marker:hover .marker-tooltip {
-  display: block;
-}
-
-.map-marker.patna {
-  top: 45%;
-  left: 55%;
-}
-
-.map-marker.delhi {
-  top: 60%;
-  left: 50%;
-}
-
-.map-marker.maharashtra {
-  top: 58%;
-  left: 52%;
-}
-
-.marker-tooltip {
-  position: absolute;
-  bottom: 25px;
-  left: -70px;
-  background: #000;
-  color: #fff;
-  padding: 6px 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  white-space: nowrap;
-  display: none;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-
-/* ===== Mobile layout ===== */
+/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
 
-  /* parent jahan ye dono hain (section / row / container) */
-  .contact-info-cards,
-  .map-container {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* FORCE vertical layout */
-  .contact-info-cards {
-    order: 2;              /* content neeche */
-    margin-top: 20px;
-  }
-
-  .map-container {
-    order: 1;              /* image upar */
-    margin: 0 auto;
-  }
-
-  /* image thoda wide dikhe */
-  .map-image {
-    width: 115%;
-    max-width: none;
-    margin-left: -7.5%;
-  }
-}
-
-/* ===== Parent ko flex banao ===== */
-.contact-section {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-/* ===== Mobile layout ===== */
-@media (max-width: 768px) {
-
-  .contact-section {
-    flex-direction: column;   /* 🔥 upar–neeche */
+  .contact-wrapper {
+    flex-direction: column;   /* 🔥 upar-neeche */
   }
 
   .map-container {
     order: 1;                 /* image upar */
     width: 100%;
-    max-width: 100%;
   }
 
   .contact-info-cards {
-    order: 2;                 /* content neeche */
+    order: 2;                 /* content niche */
     width: 100%;
   }
 
-  /* image ko visible + wide karo */
+  /* image ko wide dikhao */
   .map-image {
     width: 120%;
-    max-width: none;
     margin-left: -10%;
-    display: block;
+    max-width: none;
   }
 
-  /* horizontal scroll band */
   body {
     overflow-x: hidden;
   }
