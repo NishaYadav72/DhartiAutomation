@@ -6759,3 +6759,21 @@ button:hover,
     }
 }
 
+
+/* Mobile screen fix for hero buttons */
+@media (max-width: 480px) {
+    .hero-buttons {
+        display: flex;
+        flex-wrap: nowrap;      /* line break roke */
+        justify-content: center; /* center me align kare */
+        gap: 8px;               /* buttons ke beech space */
+    }
+
+    .hero-buttons .btn {
+        flex: 0 1 auto;         /* button apne content ke according width le */
+        white-space: nowrap;     /* text wrap nahi hoga */
+        font-size: 14px;        /* mobile friendly size */
+        padding: 8px 12px;      /* mobile me thoda chhota padding */
+    }
+}
+
