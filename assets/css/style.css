@@ -6814,7 +6814,7 @@ button:hover,
   }
 
   .page-hero-badges .page-badge{
-    width: 85%;                /* 👈 pehle 100% tha, ab thoda kam */
+    width: 90%;                /* 👈 pehle 100% tha, ab thoda kam */
     max-width: 320px;          /* zyada bada na ho */
     margin: 0 auto;
   }
