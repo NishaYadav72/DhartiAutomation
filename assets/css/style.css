@@ -6277,89 +6277,77 @@ button:hover,
 
 
 
-/* LEFT SIDE */
-.footer-left {
-    width: 45%;
+@media (max-width: 768px) {
+    /* Overlay content: maintain left-right layout */
+    .video-footer-overlay {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between; /* left-right spread */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Left and Right width */
+    .footer-left {
+        width: 45%; /* left side slightly smaller */
+        text-align: left;
+    }
+
+    .footer-right {
+        width: 50%; /* right side slightly bigger to push right */
+        text-align: right; /* align text to right edge */
+    }
+
+    /* Reduce font size for mobile */
+    .dropdown-btn {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    /* Dropdown content hidden by default */
+    .dropdown-content {
+        display: none;
+        margin-top: 5px;
+    }
+
+    /* Show dropdown on tap */
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    /* Footer logo smaller */
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    /* Links and contact font size */
+    .footer-links a,
+    .contact-content p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Social links spacing */
+    .social-links a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    /* Footer bottom content */
+    .video-footer-content {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .video-footer-content img {
+        width: 60px;
+        margin-bottom: 5px;
+    }
 }
 
-.footer-logo {
-    width: 80px;          /* 🔽 chhota size */
-    height: 80px;
-    border-radius: 50%;   /* 🔵 circle */
-    object-fit: cover;    /* image stretch na ho */
-    margin-bottom: 15px;
-    border: 2px solid #fff;   /* optional: clean white border */
-}
 
-
-.footer-desc {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-/* QUICK LINKS */
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* RIGHT SIDE */
-.footer-right {
-    width: 35%;
-    margin-left: auto;     /* 🔥 aur right push */
-    text-align: right;     /* text right aligned */
-}
-
-
-.footer-right p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.social-links {
-    text-align: right;
-    justify-content: flex-end;  /* 🔥 pure right */
-
-}
-
-.social-links a {
-    margin-left: 10px;   /* left margin instead of right */
-    margin-right:0;
-}
-
-
-
-
-
-
-.video-footer-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.video-footer-content img {
-    width: 80px;
-    margin-bottom: 10px;
-}
 
 
 /* Dropdown base */
