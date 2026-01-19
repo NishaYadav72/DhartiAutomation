@@ -247,6 +247,8 @@ nav {
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     overflow: hidden;
+    padding-bottom: 60px; /* image ke liye space */
+
 }
 
 @keyframes gradientShift {
@@ -421,8 +423,8 @@ nav {
 .hero-inner {
     position: relative;
     z-index: 3;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     width: 100%;
@@ -446,7 +448,8 @@ nav {
 
 .hero-media-frame img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 320px;
     object-fit: cover;
     display: block;
 }
@@ -845,6 +848,29 @@ nav {
     position: relative;
     z-index: 1;
 }
+
+
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 0;
+        padding-top: 40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
 
 .experience-float {
     position: absolute;
