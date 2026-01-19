@@ -224,31 +224,38 @@ $dropdownToggles.on('click', function(e) {
 
 
 
-    // =======================
-// FOOTER DROPDOWN TOGGLE (MOBILE FIX)
 // =======================
-$('.video-footer-wrapper .dropdown-btn').on('click', function (e) {
+// FOOTER DROPDOWN – MOBILE TOGGLE FIX
+// =======================
+$('.video-footer-wrapper .dropdown-btn').on('click touchstart', function (e) {
     e.preventDefault();
-    e.stopPropagation();
+    e.stopImmediatePropagation();
 
-    const $parent = $(this).closest('.dropdown');
+    const $dropdown = $(this).closest('.dropdown');
 
-    // same dropdown toggle
-    $parent.toggleClass('active');
-
-    // baaki dropdown band
-    $('.video-footer-wrapper .dropdown').not($parent).removeClass('active');
+    // agar open hai → close
+    if ($dropdown.hasClass('active')) {
+        $dropdown.removeClass('active');
+    } 
+    // agar closed hai → open + baaki close
+    else {
+        $('.video-footer-wrapper .dropdown').removeClass('active');
+        $dropdown.addClass('active');
+    }
 });
 
 // footer ke bahar click par close
-$(document).on('click', function () {
-    $('.video-footer-wrapper .dropdown').removeClass('active');
+$(document).on('click touchstart', function (e) {
+    if (!$(e.target).closest('.video-footer-wrapper').length) {
+        $('.video-footer-wrapper .dropdown').removeClass('active');
+    }
 });
 
-// footer ke andar click par close na ho
-$('.video-footer-wrapper').on('click', function (e) {
-    e.stopPropagation();
+// footer ke andar click par document click na chale
+$('.video-footer-wrapper').on('click touchstart', function (e) {
+    e.stopImmediatePropagation();
 });
+
 
 
 });

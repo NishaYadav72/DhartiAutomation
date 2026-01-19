@@ -6463,7 +6463,7 @@ button:hover,
 
 /* Links styling */
 .dropdown-content a {
-    color: #ffd700;
+    color: white;
     text-decoration: none;
 }
 
@@ -6473,7 +6473,7 @@ button:hover,
 
 /* Contact alignment */
 .contact-content p {
-    color: #ffd700;
+    color: white;
     line-height: 1.6;
 }
 
