@@ -7091,7 +7091,7 @@ button:hover,
 
 @media (max-width: 768px) {
     .hero-buttons {
-        margin-left: 50px;   /* 👈 mobile par thoda right */
+        margin-left: 40px;   /* 👈 mobile par thoda right */
     }
 }
 @media (max-width: 768px) {
