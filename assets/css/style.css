@@ -234,22 +234,54 @@ nav {
 
 
 
-/* Hero Banner Section */
 .hero-banner {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 900px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
-    overflow: hidden;
-    padding-bottom: 60px; /* image ke liye space */
-
 }
+
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: auto;          /* ❗ auto height */
+        min-height: auto;      /* ❗ remove min */
+        max-height: none;      /* ❗ remove limit */
+        padding: 80px 0 40px;  /* space upar + niche */
+        overflow: visible;     /* ❗ CUT band */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-media-frame img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #particles-js,
+    .floating-elements,
+    .neon-lines {
+        display: none;
+    }
+}
+
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
@@ -423,8 +455,8 @@ nav {
 .hero-inner {
     position: relative;
     z-index: 3;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 2rem;
     width: 100%;
@@ -488,29 +520,6 @@ nav {
     width: 26px;
     height: 26px;
     object-fit: contain;
-}
-
-
-
-@media (max-width: 768px) {
-    .about-section {
-        margin-top: 0;
-        padding-top: 40px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .about-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-photo img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
 }
 
 @keyframes fadeInUp {
