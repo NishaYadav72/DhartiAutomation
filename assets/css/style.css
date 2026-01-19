@@ -6633,3 +6633,67 @@ button:hover,
   }
 }
 
+
+@media (max-width: 768px) {
+    .service-view-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .plan-rollout-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cta-actions {
+        display: flex;
+        flex-direction: row;        /* side by side */
+        justify-content: center;    /* center me */
+        align-items: center;
+        gap: 12px;                  /* dono ke beech space */
+        flex-wrap: nowrap;          /* line break na ho */
+    }
+
+    .cta-actions .btn {
+        white-space: nowrap;        /* text cut na ho */
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    a.btn.btn-secondary {
+        display: block;          /* block banega, width ke hisaab se */
+        margin-left: auto;        /* center alignment */
+        margin-right: auto;       /* center alignment */
+        text-align: center;       /* text bhi center me */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .video-footer-overlay {
+        flex-direction: row;          /* dono buttons ek row me rahein */
+        justify-content: space-between; /* left aur right align */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-left {
+        margin-left: -50px;               /* thoda aur left shift chahiye to adjust kar sakte ho */
+    }
+
+    .footer-right {
+        margin-right: -50px;              /* thoda aur right shift chahiye to adjust kar sakte ho */
+    }
+}
