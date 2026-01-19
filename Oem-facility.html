@@ -39,52 +39,57 @@ header .logo-icon img {
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-<div class="logo-icon">
-  <img src="assets/images/logo.jpeg" alt="Logo">
-</div>
-            </a>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <img src="assets/images/logo.jpeg" alt="Dharti IoT Logo">
+            </div>
+        </a>
+        
+        <nav>
+            <!-- Hamburger / mobile menu button -->
+<!-- Mobile menu toggle with unique ID -->
+<button type="button" id="mobileMenuBtn" class="mobile-menu-toggle">
+    <span style="background-color:black;"></span>
+    <span style="background-color:black;"></span>
+    <span style="background-color:black;"></span>
+</button>
+
+
             
-            <nav>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
                 
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
-                    
-                    <li class="nav-item dropdown">
-                        <a href="Product.html" class="nav-link dropdown-toggle">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Product.html" class="nav-link">All Products</a></li>
-                            <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
-                            <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
-                            <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
-                            <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item dropdown">
-                        <a href="Service.html" class="nav-link dropdown-toggle">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Service.html" class="nav-link">All Services</a></li>
-                            <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
-                            <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
-                            <li><a href="consunting.html" class="nav-link">Consulting</a></li>
-                            <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
-                    <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
-                    <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <button type="button" class="dropdown-toggle" style="font-size: 0.95rem;font-weight: 500;" >Products</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Product.html" class="nav-link">All Products</a></li>
+                        <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
+                        <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
+                        <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
+                        <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <button type="button" class="dropdown-toggle" style="font-size: 0.95rem;font-weight: 500;">Services</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Service.html" class="nav-link">All Services</a></li>
+                        <li><a href="Service-detail.html" class="nav-link">Installation</a></li>
+                        <li><a href="maintenance.html" class="nav-link">Maintenance</a></li>
+                        <li><a href="consunting.html" class="nav-link">Consulting</a></li>
+                        <li><a href="custome.html" class="nav-link">Custom Solutions</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item"><a href="Oem-facility.html" class="nav-link">OEM Facility</a></li>
+                <li class="nav-item"><a href="career.html" class="nav-link">Careers</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
     
     <main>
