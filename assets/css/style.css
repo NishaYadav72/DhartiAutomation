@@ -6814,8 +6814,8 @@ button:hover,
   }
 
   .page-hero-badges .page-badge{
-    width: 95%;                /* 👈 pehle 100% tha, ab thoda kam */
-    max-width: 320px;          /* zyada bada na ho */
+    width: 100%;                /* 👈 pehle 100% tha, ab thoda kam */
+    max-width: 500px;          /* zyada bada na ho */
     margin: 0 auto;
   }
 
@@ -6831,19 +6831,25 @@ button:hover,
 
 /* Mobile layout */
 @media (max-width: 768px) {
+
     .hero-buttons {
-        display: flex !important;       /* flex force karo */
-        flex-direction: row !important; /* ek line me */
-        justify-content: center;        /* center me align */
-        gap: 10px;                      /* buttons ke beech thoda gap */
-        flex-wrap: nowrap;              /* wrap na ho */
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 8px;                 /* gap thoda kam */
+        flex-wrap: nowrap;
     }
 
     .hero-buttons .btn {
-        width: auto !important;         /* button apne content ke size ka ho */
-        white-space: nowrap;            /* text wrap na ho */
+        padding: 8px 14px;        /* 👈 width kam hogi */
+        font-size: 14px;          /* text thoda compact */
+        min-width: unset;         /* force width hatao */
+        width: auto !important;
+        white-space: nowrap;
     }
 }
+
+
 
 
 .hero-visual-frame {
