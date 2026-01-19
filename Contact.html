@@ -143,11 +143,11 @@
                 <li class="nav-item dropdown">
                     <button type="button" class="dropdown-toggle" style="font-size: 0.95rem;font-weight: 500;" >Products</button>
                     <ul class="dropdown-menu">
-                        <li><a href="Product.html" class="nav-link">All Products</a></li>
-                        <li><a href="Product-detail.html" class="nav-link">Smart Lighting</a></li>
-                        <li><a href="Product-detail.html" class="nav-link">Smart Security</a></li>
-                        <li><a href="Product-detail.html" class="nav-link">Climate Control</a></li>
-                        <li><a href="Product-detail.html" class="nav-link">Energy Management</a></li>
+                        <li><a href="under-mainenance.html" class="nav-link">All Products</a></li>
+                        <li><a href="under-mainenance.html" class="nav-link">Smart Lighting</a></li>
+                        <li><a href="under-mainenance.html" class="nav-link">Smart Security</a></li>
+                        <li><a href="under-mainenance.html" class="nav-link">Climate Control</a></li>
+                        <li><a href="under-mainenance.html" class="nav-link">Energy Management</a></li>
                     </ul>
                 </li>
                 
@@ -346,140 +346,54 @@
     style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; max-width:1200px; margin:auto; padding:0 20px;">
 
     <!-- CONTACT INFO (LEFT) -->
-     
+
     <div class="contact-info-cards">
-      <div class="info-card" style="margin-bottom:20px;">
-        <strong>📍 Address</strong>
-        <p>Dharti Automation, Maurya Lok, Patna-800001</p>
-      </div>
+  <div class="info-card">
+    <strong>📍 Address</strong>
+    <p>Dharti Automation, Maurya Lok, Patna-800001</p>
+  </div>
 
-      <div class="info-card" style="margin-bottom:20px;">
-        <strong>📞 Phone</strong>
-        <p>+91 7070868686</p>
-      </div>
+  <div class="info-card">
+    <strong>📞 Phone</strong>
+    <p>+91 7070868686</p>
+  </div>
 
-    
-      <div class="info-card">
-        <strong>✉️ Email</strong>
-        <p>info@dhartiautomation.com</p>
-      </div>
+  <div class="info-card">
+    <strong>✉️ Email</strong>
+    <p>info@dhartiautomation.com</p>
+  </div>
     </div>
 
-    <!-- MAP (RIGHT) -->
-    <div class="map-container"
-      style="position:relative; width:100%; max-width:800px; margin-left:auto;">
+   <div class="map-container">
 
-      <img src="assets/images/resource/mapIndia.svg"
-        alt="India Map"
-        style="width:100%; display:block; border-radius:15px;">
+  <img src="assets/images/resource/mapIndia.svg" alt="India Map" class="map-image">
 
-      <!-- Patna Marker -->
-      <div
-        style="
-          position:absolute;
-          top:45%;
-          left:55%;
-          width:14px;
-          height:14px;
-          background:red;
-          border-radius:50%;
-          cursor:pointer;
-          animation:pulse 1.8s infinite;
-        "
-        onmouseover="this.children[0].style.display='block'"
-        onmouseout="this.children[0].style.display='none'"
-      >
-        <span
-          style="
-            position:absolute;
-            bottom:25px;
-            left:-70px;
-            background:#000;
-            color:#fff;
-            padding:6px 10px;
-            font-size:12px;
-            border-radius:4px;
-            white-space:nowrap;
-            display:none;
-          "
-        >
-          📍 Marketing Office – Maurya Lok Complex, Block-A <br>
-          5th Floor, New Dak Bunglow Rd, <br>
-          Patna, Bihar-800001
-        </span>
-      </div>
+  <!-- Patna Marker -->
+  <div class="map-marker patna">
+    <span class="marker-tooltip">
+      📍 Marketing Office – Maurya Lok Complex, Block-A <br>
+      5th Floor, New Dak Bunglow Rd, <br>
+      Patna, Bihar-800001
+    </span>
+  </div>
 
-      <!-- Delhi Marker -->
-      <div
-        style="
-          position:absolute;
-          top:60%;
-          left:50%;
-          width:14px;
-          height:14px;
-          background:red;
-          border-radius:50%;
-          cursor:pointer;
-          animation:pulse 1.8s infinite;
-        "
-        onmouseover="this.children[0].style.display='block'"
-        onmouseout="this.children[0].style.display='none'"
-      >
-        <span
-          style="
-            position:absolute;
-            bottom:25px;
-            left:-40px;
-            background:#000;
-            color:#fff;
-            padding:6px 10px;
-            font-size:12px;
-            border-radius:4px;
-            white-space:nowrap;
-            display:none;
-          "
-        >
-          📍 M-55, M Block Market, GK-2, Delhi
-        </span>
-      </div>
+  <!-- Delhi Marker -->
+  <div class="map-marker delhi">
+    <span class="marker-tooltip">
+      📍 M-55, M Block Market, GK-2, Delhi
+    </span>
+  </div>
 
-
-      <!-- Maharashtra Marker -->
-        <div
-        style="
-            position:absolute;
-            top:58%;
-            left:52%;
-            width:14px;
-            height:14px;
-            background:red;
-            border-radius:50%;
-            cursor:pointer;
-            animation:pulse 1.8s infinite;
-        "
-        onmouseover="this.children[0].style.display='block'"
-        onmouseout="this.children[0].style.display='none'"
-        >
-        <span
-            style="
-            position:absolute;
-            bottom:25px;
-            left:-55px;
-            background:#000;
-            color:#fff;
-            padding:6px 10px;
-            font-size:12px;
-            border-radius:4px;
-            white-space:nowrap;
-            display:none;
-            "
-        >
-            📍 Dharti Automation Dreame Balle Vue, <br> Uttam Nagr, Bhunde Vasti, br Bavdhan(Pure-Maharashtra 411021)
-        </span>
-        </div>
-
+  <!-- Maharashtra Marker -->
+  <div class="map-marker maharashtra">
+    <span class="marker-tooltip">
+      📍 Dharti Automation Dreame Balle Vue, <br>
+      Uttam Nagar, Bavdhan, Pune-Maharashtra 411021
+    </span>
+  </div>
 
     </div>
+
 
 
 
@@ -512,7 +426,7 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="About.html">About Us</a></li>
-                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="under-mainenance.html">Products</a></li>
                     <li><a href="Service.html">Services</a></li>
                     <li><a href="Oem-facility.html">OEM Facility</a></li>
                     <li><a href="enquiry.html">Make Enquiry</a></li>
@@ -583,7 +497,7 @@
 
     <ul class="dropdown-content">
         <li><a href="About.html">About Us</a></li>
-        <li><a href="Product.html">Products</a></li>
+        <li><a href="under-mainenance.html">Products</a></li>
         <li><a href="Service.html">Services</a></li>
         <li><a href="Oem-facility.html">OEM Facility</a></li>
         <li><a href="enquiry.html">Make Enquiry</a></li>

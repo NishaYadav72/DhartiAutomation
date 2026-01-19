@@ -6897,8 +6897,7 @@ button:hover,
 
 @media (max-width: 768px) {
 
-    /* 🔥 parent ko column banana ZAROORI hai */
-    .contact-section,          /* agar tumhare section ka class ye hai */
+    .contact-section,       
     .contact-wrapper,
     .contact-container {
         display: flex !important;
@@ -6914,23 +6913,20 @@ button:hover,
         box-sizing: border-box;
     }
 
-    /* map upar */
     .map-container {
         order: -1;
     }
 
-    /* content niche */
     .contact-info-cards {
         order: 1;
     }
 
-    /* image aur wide */
     .map-container img {
-        width: 130% !important;     /* aur wide */
+        width: 100% ;     
         max-width: none !important;
         height: auto;
         display: block;
-        margin-left: -15%;          /* center align */
+        margin-left: -15%;          
     }
 
     section {
@@ -6943,15 +6939,111 @@ button:hover,
 
   .hero-stats{
     display: flex;
-    flex-direction: column;   /* sab uper-niche */
+    flex-direction: column;   
     gap: 16px;
   }
 
   .hero-stats .stat-card{
-    width: 100%;              /* last card jaisi full width */
+    width: 100%;              
     max-width: 100%;
     text-align: center;
     margin: 0 auto;
   }
 
+}
+
+
+.contact-info-cards .info-card {
+  margin-bottom: 20px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+}
+
+.map-image {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.map-marker {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulse 1.8s infinite;
+}
+
+.map-marker:hover .marker-tooltip {
+  display: block;
+}
+
+.map-marker.patna {
+  top: 45%;
+  left: 55%;
+}
+
+.map-marker.delhi {
+  top: 60%;
+  left: 50%;
+}
+
+.map-marker.maharashtra {
+  top: 58%;
+  left: 52%;
+}
+
+.marker-tooltip {
+  position: absolute;
+  bottom: 25px;
+  left: -70px;
+  background: #000;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ===== Mobile layout ===== */
+@media (max-width: 768px) {
+
+  /* parent jahan ye dono hain (section / row / container) */
+  .contact-info-cards,
+  .map-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* FORCE vertical layout */
+  .contact-info-cards {
+    order: 2;              /* content neeche */
+    margin-top: 20px;
+  }
+
+  .map-container {
+    order: 1;              /* image upar */
+    margin: 0 auto;
+  }
+
+  /* image thoda wide dikhe */
+  .map-image {
+    width: 115%;
+    max-width: none;
+    margin-left: -7.5%;
+  }
 }
