@@ -221,4 +221,34 @@ $dropdownToggles.on('click', function(e) {
     initTestimonialSlider();
     $(window).on('load', initTestimonialSlider);
 
+
+
+
+    // =======================
+// FOOTER DROPDOWN TOGGLE (MOBILE FIX)
+// =======================
+$('.video-footer-wrapper .dropdown-btn').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const $parent = $(this).closest('.dropdown');
+
+    // same dropdown toggle
+    $parent.toggleClass('active');
+
+    // baaki dropdown band
+    $('.video-footer-wrapper .dropdown').not($parent).removeClass('active');
+});
+
+// footer ke bahar click par close
+$(document).on('click', function () {
+    $('.video-footer-wrapper .dropdown').removeClass('active');
+});
+
+// footer ke andar click par close na ho
+$('.video-footer-wrapper').on('click', function (e) {
+    e.stopPropagation();
+});
+
+
 });
