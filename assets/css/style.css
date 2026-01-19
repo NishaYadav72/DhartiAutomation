@@ -7047,3 +7047,42 @@ button:hover,
     margin-left: -7.5%;
   }
 }
+
+/* ===== Parent ko flex banao ===== */
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ===== Mobile layout ===== */
+@media (max-width: 768px) {
+
+  .contact-section {
+    flex-direction: column;   /* 🔥 upar–neeche */
+  }
+
+  .map-container {
+    order: 1;                 /* image upar */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-info-cards {
+    order: 2;                 /* content neeche */
+    width: 100%;
+  }
+
+  /* image ko visible + wide karo */
+  .map-image {
+    width: 120%;
+    max-width: none;
+    margin-left: -10%;
+    display: block;
+  }
+
+  /* horizontal scroll band */
+  body {
+    overflow-x: hidden;
+  }
+}
