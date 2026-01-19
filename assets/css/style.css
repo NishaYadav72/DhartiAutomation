@@ -424,7 +424,7 @@ nav {
     position: relative;
     z-index: 3;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 2rem;
     width: 100%;
@@ -448,8 +448,7 @@ nav {
 
 .hero-media-frame img {
     width: 100%;
-    height: auto;
-    max-height: 320px;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -489,6 +488,29 @@ nav {
     width: 26px;
     height: 26px;
     object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 0;
+        padding-top: 40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 @keyframes fadeInUp {
@@ -848,29 +870,6 @@ nav {
     position: relative;
     z-index: 1;
 }
-
-
-@media (max-width: 768px) {
-    .about-section {
-        margin-top: 0;
-        padding-top: 40px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .about-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-photo img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
 
 .experience-float {
     position: absolute;
