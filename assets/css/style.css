@@ -6841,7 +6841,7 @@ button:hover,
     }
 
     .hero-buttons .btn {
-        padding: 8px 14px;        /* 👈 width kam hogi */
+        padding: 6px 12px;        /* 👈 width kam hogi */
         font-size: 14px;          /* text thoda compact */
         min-width: unset;         /* force width hatao */
         width: auto !important;
