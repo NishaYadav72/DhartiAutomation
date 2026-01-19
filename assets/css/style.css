@@ -6690,10 +6690,72 @@ button:hover,
     }
 
     .footer-left {
-        margin-left: -50px;               /* thoda aur left shift chahiye to adjust kar sakte ho */
+        margin-left: -40px;               /* thoda aur left shift chahiye to adjust kar sakte ho */
     }
 
     .footer-right {
-        margin-right: -50px;              /* thoda aur right shift chahiye to adjust kar sakte ho */
+        margin-right: -45px;              /* thoda aur right shift chahiye to adjust kar sakte ho */
+    }
+
+    
+}
+
+/* Default horizontal layout */
+.form-actions {
+    display: flex;
+    gap: 10px; /* buttons ke beech gap */
+    flex-wrap: wrap; /* wrap agar screen chhoti ho */
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .form-actions {
+        justify-content: center; /* center me buttons */
+        gap: 8px; /* thoda chhota gap */
+    }
+
+    .form-actions .btn {
+        flex: 1 1 auto; /* dono buttons equal width le sakte hai */
+        max-width: 45%; /* dono buttons ek line me comfortably aa jaye */
     }
 }
+
+
+.hero-buttons {
+    display: flex;
+    gap: 12px; /* buttons ke beech thoda space */
+    flex-wrap: wrap; /* agar zarurat ho to wrap ho sake */
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center; /* center me rakhe */
+        gap: 8px; /* thoda chhota gap mobile ke liye */
+    }
+
+    .hero-buttons .btn {
+        flex: 1 1 auto;    /* dono buttons equal width le sakte hain */
+        max-width: 45%;    /* dono buttons ek line me comfortably aa jaye */
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px; /* buttons ke beech ka space */
+    flex-wrap: wrap; /* agar zarurat ho to wrap ho sake */
+}
+
+/* Mobile screen tweaks */
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center; /* buttons center me rahe */
+        gap: 8px; /* mobile ke liye thoda kam gap */
+    }
+
+    .hero-buttons .btn {
+        flex: 1 1 auto;   /* dono buttons roughly equal width le */
+        max-width: 45%;   /* side by side comfortably fit ho jaye */
+    }
+}
+
