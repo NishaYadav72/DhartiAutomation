@@ -6804,25 +6804,23 @@ button:hover,
 }
 
 
-/* Mobile layout for hero badges */
 @media (max-width: 768px) {
-    .page-hero-badges {
-        display: flex;
-        flex-wrap: wrap;   /* badges ko wrap karne ke liye */
-        gap: 10px;         /* badges ke beech gap */
-    }
 
-    .page-hero-badges .page-badge {
-        flex: 1 1 auto;    /* default width, side by side for first two */
-    }
+  .page-hero-badges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* center me rahe */
+    gap: 12px;
+  }
 
-    /* Third badge ko full width & center */
-    .page-hero-badges .page-badge:nth-child(3) {
-        flex: 0 0 100%;     /* full width */
-        text-align:left; /* center alignment */
-        margin-top: 12px;   /* upar se thoda gap */
-    }
+  .page-hero-badges .page-badge{
+    width: 85%;                /* 👈 pehle 100% tha, ab thoda kam */
+    max-width: 320px;          /* zyada bada na ho */
+    margin: 0 auto;
+  }
+
 }
+
 
 
 /* Desktop - default, jaise abhi hai */
