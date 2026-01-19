@@ -6721,59 +6721,215 @@ button:hover,
 }
 
 
+
+
+
+
+
+/* Mobile fix: keep hero buttons in single line */
+@media (max-width: 480px) {
+    .hero-buttons {
+        display: flex !important;       /* flex enable karo */
+        flex-wrap: nowrap !important;   /* wrap mat hone do */
+        justify-content: center;        /* center me align kare */
+        gap: 8px;                       /* buttons ke beech thoda gap */
+    }
+
+    .hero-buttons .btn {
+        flex: 0 0 auto;                 /* buttons apni content width le */
+        white-space: nowrap;            /* text wrap na ho */
+    }
+}
+
+
+/* Mobile view adjustments for hero-stats */
+@media (max-width: 768px) {
+    .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* pehle do left align */
+        gap: 16px; /* cards ke beech space */
+    }
+
+    .hero-stats .stat-card {
+        flex: 0 0 48%; /* do cards ek line me aa sake */
+        margin-bottom: 16px;
+    }
+
+    /* Third card ko center karna */
+    .hero-stats .stat-card:nth-child(3) {
+        flex: 0 0 100%;      /* full width le */
+        text-align: center;  /* content center me ho */
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* CTA Actions */
+    .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px; /* buttons ke beech gap */
+    }
+
+    .cta-actions a:nth-child(1),
+    .cta-actions a:nth-child(2) {
+        flex: 1 1 auto;  /* dono ek line me rahe */
+    }
+
+    .cta-actions a:nth-child(3) {
+        flex: 0 0 100%;      /* full width le */
+        text-align: center;  /* center me dikhe */
+        margin-top: 12px;    /* upar se thoda gap */
+    }
+
+    /* CTA Quick Facts */
+    .cta-quick-facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .cta-quick-facts .cta-fact:nth-child(1),
+    .cta-quick-facts .cta-fact:nth-child(2) {
+        flex: 1 1 auto; /* first two left aligned */
+    }
+
+    .cta-quick-facts .cta-fact:nth-child(3) {
+        flex: 0 0 100%;      /* full width */
+        text-align: center;  /* center me */
+        margin-top: 16px;    /* upar se gap */
+    }
+}
+
+
+/* Mobile layout for hero badges */
+@media (max-width: 768px) {
+    .page-hero-badges {
+        display: flex;
+        flex-wrap: wrap;   /* badges ko wrap karne ke liye */
+        gap: 10px;         /* badges ke beech gap */
+    }
+
+    .page-hero-badges .page-badge {
+        flex: 1 1 auto;    /* default width, side by side for first two */
+    }
+
+    /* Third badge ko full width & center */
+    .page-hero-badges .page-badge:nth-child(3) {
+        flex: 0 0 100%;     /* full width */
+        text-align:left; /* center alignment */
+        margin-top: 12px;   /* upar se thoda gap */
+    }
+}
+
+
+/* Desktop - default, jaise abhi hai */
 .hero-buttons {
     display: flex;
-    gap: 12px; /* buttons ke beech thoda space */
-    flex-wrap: wrap; /* agar zarurat ho to wrap ho sake */
+    gap: 15px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .hero-buttons {
+        display: flex !important;       /* flex force karo */
+        flex-direction: row !important; /* ek line me */
+        justify-content: center;        /* center me align */
+        gap: 10px;                      /* buttons ke beech thoda gap */
+        flex-wrap: nowrap;              /* wrap na ho */
+    }
+
+    .hero-buttons .btn {
+        width: auto !important;         /* button apne content ke size ka ho */
+        white-space: nowrap;            /* text wrap na ho */
+    }
+}
+
+
+.hero-visual-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero-visual-frame img {
+    width: 100%;       /* full width */
+    height: auto;      /* original aspect ratio */
+    display: block;
+    object-fit: contain; /* crop nahi, pura dikhe */
+    max-height: 80vh;  /* optional: max height screen ke hisaab se */
+}
+
+/* Overlay and badge positioning */
+.hero-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+.hero-visual-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
 }
 
 /* Mobile tweaks */
 @media (max-width: 768px) {
-    .hero-buttons {
-        justify-content: center; /* center me rakhe */
-        gap: 8px; /* thoda chhota gap mobile ke liye */
-    }
-
-    .hero-buttons .btn {
-        flex: 1 1 auto;    /* dono buttons equal width le sakte hain */
-        max-width: 45%;    /* dono buttons ek line me comfortably aa jaye */
+    .hero-visual-badge {
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px;
     }
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 12px; /* buttons ke beech ka space */
-    flex-wrap: wrap; /* agar zarurat ho to wrap ho sake */
-}
 
-/* Mobile screen tweaks */
+
+
 @media (max-width: 768px) {
-    .hero-buttons {
-        justify-content: center; /* buttons center me rahe */
-        gap: 8px; /* mobile ke liye thoda kam gap */
+
+    /* 🔥 parent ko column banana ZAROORI hai */
+    .contact-section,          /* agar tumhare section ka class ye hai */
+    .contact-wrapper,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;   /* 👈 yahi main fix hai */
     }
 
-    .hero-buttons .btn {
-        flex: 1 1 auto;   /* dono buttons roughly equal width le */
-        max-width: 45%;   /* side by side comfortably fit ho jaye */
+    .map-container,
+    .contact-info-cards {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* map upar */
+    .map-container {
+        order: -1;
+    }
+
+    /* content niche */
+    .contact-info-cards {
+        order: 1;
+    }
+
+    /* image aur wide */
+    .map-container img {
+        width: 130% !important;     /* aur wide */
+        max-width: none !important;
+        height: auto;
+        display: block;
+        margin-left: -15%;          /* center align */
+    }
+
+    section {
+        overflow-x: hidden;
     }
 }
-
-
-/* Mobile screen fix for hero buttons */
-@media (max-width: 480px) {
-    .hero-buttons {
-        display: flex;
-        flex-wrap: nowrap;      /* line break roke */
-        justify-content: center; /* center me align kare */
-        gap: 8px;               /* buttons ke beech space */
-    }
-
-    .hero-buttons .btn {
-        flex: 0 1 auto;         /* button apne content ke according width le */
-        white-space: nowrap;     /* text wrap nahi hoga */
-        font-size: 14px;        /* mobile friendly size */
-        padding: 8px 12px;      /* mobile me thoda chhota padding */
-    }
-}
-
