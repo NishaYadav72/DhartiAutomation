@@ -396,6 +396,11 @@ nav {
     z-index: 2;
 }
 
+
+
+
+
+
 .hero-content {
     position: relative;
     z-index: 3;
@@ -821,6 +826,7 @@ nav {
 
 
 
+/* Desktop: same as before */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -872,12 +878,44 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+/* Desktop same as before */
 .about-photo img {
     width: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: cover; /* desktop */
+    height: 100%;
 }
 
+/* Mobile: stack images and show fully */
+@media (max-width: 768px) {
+    .about-grid {
+        display: flex;
+        flex-direction: column; /* vertical stack */
+        gap: 2rem;
+    }
+
+    .about-visual,
+    .about-content {
+        width: 100%; /* full width */
+    }
+
+    .about-photo {
+        height: auto;      /* auto height so image not cut */
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: auto;      /* maintain aspect ratio */
+        object-fit: contain; /* show full image */
+    }
+
+    .experience-float {
+        bottom: 12px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 200px;
+    }
+}
 .about-photo::after {
     content: '';
     position: absolute;
@@ -6482,13 +6520,13 @@ button:hover,
    ============================== */
 #mobileMenuBtn {
     display: none; /* hide on desktop */
-    background: black;
+    background: white; /* button background */
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    width: 30px;   /* thoda bada karo lines ke liye */
-    height: 25px;  /* thoda height lines ke beech space ke liye */
+    width: 30px;
+    height: 25px;
     flex-direction: column;
     justify-content: space-between;
     z-index: 9999;
@@ -6498,7 +6536,7 @@ button:hover,
     display: block;
     height: 3px;
     width: 100%;
-    background-color: black; /* black lines */
+    background-color: black; /* ✅ lines color black */
     border-radius: 2px;
 }
 
